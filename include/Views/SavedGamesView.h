@@ -1,9 +1,9 @@
 #ifndef SAVEDGAMESVIEW_H
 #define SAVEDGAMESVIEW_H
 
-#include <BaseView.h>
+#include "../Views/BaseView.h"
 
-#include "SavedGamesModel.h"
+#include "../Models/SavedGamesModel.h"
 
 using namespace std;
 class SavedGamesView : public BaseView

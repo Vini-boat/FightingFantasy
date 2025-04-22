@@ -1,4 +1,4 @@
-#include "MenuView.h"
+#include "../../include/Views/MenuView.h"
 #include <iostream>
 #include <string>
 
@@ -15,11 +15,18 @@ MenuView::~MenuView()
 
 void MenuView::show()
 {
-    cout << "MENU" << endl;
+    limparTela();
+    cout << "========== MENU ==========" << endl;
+    cout << endl;
+    cout << "   n: Novo Jogo" << endl;
+    cout << "   c: Carregar Jogo" << endl;
+    cout << "   s: Sair" << endl;
+    showCursor();
 }
 
 void MenuView::handleInput()
 {
     string t;
     cin >> t;
+    executeOption(t);
 }

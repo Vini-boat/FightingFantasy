@@ -1,7 +1,7 @@
-#include "SavedGamesView.h"
-#include "SavedGamesModel.h"
+#include "../../include/Views/SavedGamesView.h"
+#include "../../include/Models/SavedGamesModel.h"
 #include <iostream>
-
+#include <string>
 
 
 using namespace std;
@@ -17,15 +17,23 @@ SavedGamesView::~SavedGamesView()
 
 void SavedGamesView::show()
 {
+    limparTela();
     cout << "===== SAVED GAMES =====" << endl;
+    cout << endl;
     int i =0;
     for(string name: model->getSavedGamesNames())
     {
-        cout << i << "- " << name << endl;
+        cout << "   " << i << "- " << name << endl;
+        i++;
     }
+    cout << endl;
+    cout << "   v: Voltar" << endl;
+    showCursor();
 }
 
 void SavedGamesView::handleInput()
 {
-
+    string t;
+    cin >> t;
+    executeOption(t);
 }

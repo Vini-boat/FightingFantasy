@@ -1,7 +1,7 @@
 #ifndef SAVEDGAMESMODEL_H
 #define SAVEDGAMESMODEL_H
 
-#include <BaseModel.h>
+#include "../../include/Models/BaseModel.h"
 #include <string>
 #include <vector>
 

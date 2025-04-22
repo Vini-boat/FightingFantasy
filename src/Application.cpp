@@ -1,12 +1,16 @@
-#include "Application.h"
-#include "MenuView.h"
-#include "SavedGamesModel.h"
-#include "SavedGamesView.h"
+#include "../include/Application.h"
+#include "../include/Views/MenuView.h"
+#include "../include/Models/SavedGamesModel.h"
+#include "../include/Views/SavedGamesView.h"
+
+#include "../include/Commands/Sair.h"
+#include "../include/Commands/ChangeView.h"
 
 #include <map>
 #include <memory>
 #include <string>
 
+using namespace std;
 Application::Application()
 {
     this->running - true;
@@ -15,7 +19,13 @@ Application::Application()
     this->saved_games_model = new SavedGamesModel;
 
     this->views["menu"] = make_unique<MenuView>();
+    this->views["menu"]->addOption("n", new ChangeView(this, "newgame"));
+    this->views["menu"]->addOption("c", new ChangeView(this, "savedgames"));
+    this->views["menu"]->addOption("s", new Sair(this));
+
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
+    this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
+
 }
 
 Application::~Application()

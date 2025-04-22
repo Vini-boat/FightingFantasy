@@ -7,11 +7,11 @@
 #include <string>
 #include <memory>
 
-#include "BaseView.h"
-#include "BaseController.h"
-#include "BaseModel.h"
+#include "../include/Views/BaseView.h"
+#include "../include/Controllers/BaseController.h"
+#include "../include/Models/BaseModel.h"
 
-#include "SavedGamesModel.h"
+#include "../include/Models/SavedGamesModel.h"
 
 using namespace std;
 class Application: public IRunner, public IViewRouter
