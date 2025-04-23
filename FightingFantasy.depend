@@ -2,11 +2,12 @@
 1744910950 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\main.cpp
 	"Application.h"
 
-1745349429 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\application.cpp
+1745409602 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\application.cpp
 	"../include/Application.h"
 	"../include/Views/MenuView.h"
 	"../include/Models/SavedGamesModel.h"
 	"../include/Views/SavedGamesView.h"
+	"../include/Views/CreditosView.h"
 	"../include/Commands/Sair.h"
 	"../include/Commands/ChangeView.h"
 	<map>
@@ -24,7 +25,7 @@
 	<string>
 	<vector>
 
-1745349707 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\baseview.cpp
+1745355156 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\baseview.cpp
 	"../../include/Views/BaseView.h"
 	<map>
 	<memory>
@@ -33,12 +34,12 @@
 	<cstdlib>
 	"ICommand.h"
 
-1745349014 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\menuview.cpp
+1745409358 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\menuview.cpp
 	"../../include/Views/MenuView.h"
 	<iostream>
 	<string>
 
-1745349422 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\savedgamesview.cpp
+1745408821 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\savedgamesview.cpp
 	"../../include/Views/SavedGamesView.h"
 	"../../include/Models/SavedGamesModel.h"
 	<iostream>
@@ -57,7 +58,7 @@
 
 1744910779 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\irunner.h
 
-1745348947 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\views\baseview.h
+1745354880 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\views\baseview.h
 	<map>
 	<memory>
 	<string>
@@ -102,4 +103,11 @@
 	"ChangeView.h"
 	"IViewRouter.h"
 	<string>
+
+1745409528 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\views\creditosview.h
+	<BaseView.h>
+
+1745409561 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\creditosview.cpp
+	"CreditosView.h"
+	<iostream>
 

@@ -19,14 +19,15 @@ void MenuView::show()
     cout << "========== MENU ==========" << endl;
     cout << endl;
     cout << "   n: Novo Jogo" << endl;
-    cout << "   c: Carregar Jogo" << endl;
-    cout << "   s: Sair" << endl;
-    showCursor();
+    cout << "   s: Carregar Jogo" << endl;
+    cout << "   c: Creditos" << endl;
+    cout << "   q: Sair" << endl;
+    cout << endl;
+    cout << "---------------------------" << endl;
 }
 
 void MenuView::handleInput()
 {
-    string t;
-    cin >> t;
+    string t = getValidOption();
     executeOption(t);
 }

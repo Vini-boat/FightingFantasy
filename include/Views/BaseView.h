@@ -19,6 +19,7 @@ class BaseView
         void addOption(string shortcut, ICommand* command);
         void printOptions();
         void showCursor();
+        string getValidOption();
         void executeOption(string shortcut);
     protected:
         map<string,ICommand*> options;

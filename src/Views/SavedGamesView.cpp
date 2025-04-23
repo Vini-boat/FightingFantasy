@@ -18,7 +18,7 @@ SavedGamesView::~SavedGamesView()
 void SavedGamesView::show()
 {
     limparTela();
-    cout << "===== SAVED GAMES =====" << endl;
+    cout << "======= SAVED GAMES ======" << endl;
     cout << endl;
     int i =0;
     for(string name: model->getSavedGamesNames())
@@ -28,12 +28,11 @@ void SavedGamesView::show()
     }
     cout << endl;
     cout << "   v: Voltar" << endl;
-    showCursor();
+    cout << "------------------------------" << endl;
 }
 
 void SavedGamesView::handleInput()
 {
-    string t;
-    cin >> t;
+    string t = getValidOption();
     executeOption(t);
 }

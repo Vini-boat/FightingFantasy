@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/Interfaces" />
+					<Add directory="include/Commands" />
+					<Add directory="include/Views" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/Interfaces" />
+					<Add directory="include/Commands" />
+					<Add directory="include/Views" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +38,31 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Application.h" />
+		<Unit filename="include/Commands/ChangeView.h" />
+		<Unit filename="include/Commands/Sair.h" />
+		<Unit filename="include/Controllers/BaseController.h" />
+		<Unit filename="include/Interfaces/ICommand.h" />
+		<Unit filename="include/Interfaces/IRunner.h" />
+		<Unit filename="include/Interfaces/ISerializavel.h" />
+		<Unit filename="include/Interfaces/IViewRouter.h" />
+		<Unit filename="include/Models/BaseModel.h" />
+		<Unit filename="include/Models/SavedGamesModel.h" />
+		<Unit filename="include/Views/BaseView.h" />
+		<Unit filename="include/Views/CreditosView.h" />
+		<Unit filename="include/Views/MenuView.h" />
+		<Unit filename="include/Views/SavedGamesView.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Application.cpp" />
+		<Unit filename="src/Commands/ChangeView.cpp" />
+		<Unit filename="src/Commands/Sair.cpp" />
+		<Unit filename="src/Controllers/BaseController.cpp" />
+		<Unit filename="src/Models/BaseModel.cpp" />
+		<Unit filename="src/Models/SavedGamesModel.cpp" />
+		<Unit filename="src/Views/BaseView.cpp" />
+		<Unit filename="src/Views/CreditosView.cpp" />
+		<Unit filename="src/Views/MenuView.cpp" />
+		<Unit filename="src/Views/SavedGamesView.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

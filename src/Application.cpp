@@ -2,6 +2,7 @@
 #include "../include/Views/MenuView.h"
 #include "../include/Models/SavedGamesModel.h"
 #include "../include/Views/SavedGamesView.h"
+#include "../include/Views/CreditosView.h"
 
 #include "../include/Commands/Sair.h"
 #include "../include/Commands/ChangeView.h"
@@ -20,11 +21,15 @@ Application::Application()
 
     this->views["menu"] = make_unique<MenuView>();
     this->views["menu"]->addOption("n", new ChangeView(this, "newgame"));
-    this->views["menu"]->addOption("c", new ChangeView(this, "savedgames"));
-    this->views["menu"]->addOption("s", new Sair(this));
+    this->views["menu"]->addOption("s", new ChangeView(this, "savedgames"));
+    this->views["menu"]->addOption("c", new ChangeView(this, "credits"));
+    this->views["menu"]->addOption("q", new Sair(this));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
     this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
+
+    this->views["credits"] = make_unique<CreditosView>();
+    this->views["credits"]->addOption("v", new ChangeView(this, "menu"));
 
 }
 

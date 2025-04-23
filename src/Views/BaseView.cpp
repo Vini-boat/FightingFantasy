@@ -54,3 +54,21 @@ void BaseView::showCursor()
     cout << "------------------------------" << endl;
     cout << "> ";
 }
+
+string BaseView::getValidOption()
+{
+    while(true)
+    {
+        string option;
+        cout << "> ";
+        cin >> option;
+        for(auto& o: this->options)
+        {
+            if(option == o.first)
+            {
+                return option;
+            }
+        }
+        cout << "Opcao invalida, tente novamente" << endl;
+    }
+}
