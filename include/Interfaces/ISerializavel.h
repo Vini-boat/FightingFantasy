@@ -7,8 +7,8 @@ using namespace std;
 class ISerializavel
 {
     public:
-        virtual void serializar(string filename);
-        virtual void desserializar(string filename);
+        virtual void serializar(string filename) =0;
+        virtual void desserializar(string filename) =0;
 };
 
 #endif // ISERIALIZAVEL_H
