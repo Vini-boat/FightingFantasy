@@ -1,8 +1,13 @@
 #include "../include/Application.h"
 #include "../include/Views/MenuView.h"
 #include "../include/Models/SavedGamesModel.h"
+#include "../include/Models/PersonagemModel.h"
 #include "../include/Views/SavedGamesView.h"
+#include "../include/Views/NewGameView.h"
+#include "../include/Models/NewGameViewModel.h"
 #include "../include/Views/CreditosView.h"
+
+#include "../include/Controllers/NewGameController.h"
 
 #include "../include/Commands/Sair.h"
 #include "../include/Commands/ChangeView.h"
@@ -19,7 +24,7 @@ Application::Application()
 
     this->saved_games_model = new SavedGamesModel;
 
-    this->personagem = new PersonagemModel;
+    this->personagem_atual = new PersonagemModel;
 
     this->views["menu"] = make_unique<MenuView>();
     this->views["menu"]->addOption("n", new ChangeView(this, "newgame"));
@@ -27,7 +32,9 @@ Application::Application()
     this->views["menu"]->addOption("c", new ChangeView(this, "credits"));
     this->views["menu"]->addOption("q", new Sair(this));
 
+    this->views["newgame"] = make_unique<NewGameView>( new NewGameController(this->personagem_atual), new NewGameViewModel);
 
+    this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
     this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));

@@ -1,16 +1,16 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
-#include "IRunner.h"
-#include "IViewRouter.h"
+#include "../include/Interfaces/IRunner.h"
+#include "../include/Interfaces/IViewRouter.h"
 
 #include <map>
-#include <string>
 #include <memory>
+#include <string>
 
-#include "../include/Views/BaseView.h"
 #include "../include/Controllers/BaseController.h"
 #include "../include/Models/BaseModel.h"
 #include "../include/Models/PersonagemModel.h"
+#include "../include/Views/BaseView.h"
 
 #include "../include/Models/SavedGamesModel.h"
 
@@ -19,11 +19,11 @@ class Application: public IRunner, public IViewRouter
 {
     public:
         Application();
-        virtual ~Application();
-        void run();
-        void stop();
+        virtual ~Application() override;
+        void run() override;
+        void stop() override;
 
-        void changeCurrentView(string view_name);
+        void changeCurrentView(string view_name) override;
     protected:
 
     private:
@@ -33,7 +33,7 @@ class Application: public IRunner, public IViewRouter
         //map<string,unique_ptr<BaseModel>> models;
         SavedGamesModel* saved_games_model;
         string current_view;
-        PersonagemModel* personagem;
+        PersonagemModel* personagem_atual;
 
 };
 

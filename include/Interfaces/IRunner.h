@@ -9,9 +9,6 @@ class IRunner
         virtual ~IRunner() {}
         virtual void run() = 0;
         virtual void stop() = 0;
-    protected:
-
-    private:
 };
 
 #endif // IRUNNER_H

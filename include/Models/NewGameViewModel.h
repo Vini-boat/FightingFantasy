@@ -1,19 +1,18 @@
-#ifndef PERSONAGEMMODEL_H
-#define PERSONAGEMMODEL_H
+#ifndef NEWGAMEVIEWMODEL_H
+#define NEWGAMEVIEWMODEL_H
 
+#include <BaseModel.h>
 #include <string>
 
-#include "../Models/BaseModel.h"
-#include "../Interfaces/ISerializavel.h"
-
 using namespace std;
-class PersonagemModel : public BaseModel, public ISerializavel
+class NewGameViewModel : public BaseModel
 {
     public:
-        PersonagemModel();
-        virtual ~PersonagemModel();
-        void serializar(string filename) override;
-        void desserializar(string filename) override;
+        NewGameViewModel();
+        virtual ~NewGameViewModel();
+
+        void setEtapa(int etapa);
+        int getEtapa();
 
         void setNome(string nome);
         string getNome();
@@ -26,15 +25,12 @@ class PersonagemModel : public BaseModel, public ISerializavel
 
         void setSorte(int sorte);
         int getSorte();
-
-    protected:
-
     private:
+        int etapa_atual;
         string nome;
         int habilidade;
         int energia;
         int sorte;
-
 };
 
-#endif // PERSONAGEMMODEL_H
+#endif // NEWGAMEVIEWMODEL_H

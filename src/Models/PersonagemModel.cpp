@@ -1,4 +1,4 @@
-#include "PersonagemModel.h"
+#include "../../include/Models/PersonagemModel.h"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -55,9 +55,19 @@ void PersonagemModel::serializar(string filename)
     ofstream arquivo;
     arquivo.open(filename);
     arquivo << this->nome << endl;
+    arquivo << this->habilidade << endl;
+    arquivo << this->energia << endl;
+    arquivo << this->sorte << endl;
+    arquivo.close();
 }
 
 void PersonagemModel::desserializar(string filename)
 {
-
+    ifstream arquivo;
+    arquivo.open(filename);
+    arquivo >> this->nome;
+    arquivo >> this->habilidade;
+    arquivo >> this->energia;
+    arquivo >> this->sorte;
+    arquivo.close();
 }

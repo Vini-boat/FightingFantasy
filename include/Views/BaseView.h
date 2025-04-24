@@ -5,7 +5,7 @@
 #include <memory>
 #include <string>
 
-#include "ICommand.h"
+#include "../Interfaces/ICommand.h"
 
 using namespace std;
 class BaseView

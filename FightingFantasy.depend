@@ -1,14 +1,18 @@
 # depslib dependency file v1.0
-1745419075 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\main.cpp
-	"include/Application.h"
+1745510311 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\main.cpp
+	"./include/Application.h"
 	<iostream>
 
-1745416325 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\application.cpp
+1745515122 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\application.cpp
 	"../include/Application.h"
 	"../include/Views/MenuView.h"
 	"../include/Models/SavedGamesModel.h"
+	"../include/Models/PersonagemModel.h"
 	"../include/Views/SavedGamesView.h"
+	"../include/Views/NewGameView.h"
+	"../include/Models/NewGameViewModel.h"
 	"../include/Views/CreditosView.h"
+	"../include/Controllers/NewGameController.h"
 	"../include/Commands/Sair.h"
 	"../include/Commands/ChangeView.h"
 	<map>
@@ -57,24 +61,24 @@
 
 1745340665 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\icommand.h
 
-1744910779 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\irunner.h
+1745510240 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\irunner.h
 
-1745354880 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\views\baseview.h
+1745509956 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\views\baseview.h
 	<map>
 	<memory>
 	<string>
-	"ICommand.h"
+	"../Interfaces/ICommand.h"
 
-1745418165 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\application.h
-	"IRunner.h"
-	"IViewRouter.h"
+1745511318 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\application.h
+	"../include/Interfaces/IRunner.h"
+	"../include/Interfaces/IViewRouter.h"
 	<map>
-	<string>
 	<memory>
-	"../include/Views/BaseView.h"
+	<string>
 	"../include/Controllers/BaseController.h"
 	"../include/Models/BaseModel.h"
 	"../include/Models/PersonagemModel.h"
+	"../include/Views/BaseView.h"
 	"../include/Models/SavedGamesModel.h"
 
 1744913007 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\iviewrouter.h
@@ -113,25 +117,40 @@
 	"CreditosView.h"
 	<iostream>
 
-1745418754 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\models\personagemmodel.cpp
-	"PersonagemModel.h"
+1745511085 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\models\personagemmodel.cpp
+	"../../include/Models/PersonagemModel.h"
 	<string>
 	<iostream>
 	<fstream>
 
-1745416696 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\models\personagemmodel.h
+1745509941 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\models\personagemmodel.h
 	<string>
-	<BaseModel.h>
+	"../Models/BaseModel.h"
 	"../Interfaces/ISerializavel.h"
 
 1745418181 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\iserializavel.h
 	<string>
 
-1745418616 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\controllers\newgamecontroller.cpp
-	"NewGameController.h"
-	"PersonagemModel.h"
+1745524721 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\controllers\newgamecontroller.cpp
+	"../../include/Controllers/NewGameController.h"
+	"../../include/Models/PersonagemModel.h"
+	<string>
 
-1745418627 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\controllers\newgamecontroller.h
-	<BaseController.h>
+1745514756 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\controllers\newgamecontroller.h
+	"../Controllers/BaseController.h"
 	"../Models/PersonagemModel.h"
+	<string>
+
+1745524482 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\views\newgameview.h
+	<string>
+	<BaseView.h>
+	"../Models/NewGameViewModel.h"
+	"../Controllers/NewGameController.h"
+
+1745524436 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\models\newgameviewmodel.h
+	<BaseModel.h>
+	<string>
+
+1745524445 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\models\newgameviewmodel.cpp
+	"NewGameViewModel.h"
 
