@@ -16,6 +16,10 @@
 					<Add directory="include/Interfaces" />
 					<Add directory="include/Commands" />
 					<Add directory="include/Views" />
+					<Add directory="include/Commands/" />
+					<Add directory="include/Views/" />
+					<Add directory="include/Controllers" />
+					<Add directory="include/Models" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +32,10 @@
 					<Add directory="include/Interfaces" />
 					<Add directory="include/Commands" />
 					<Add directory="include/Views" />
+					<Add directory="include/Commands/" />
+					<Add directory="include/Views/" />
+					<Add directory="include/Controllers" />
+					<Add directory="include/Models" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -40,28 +48,52 @@
 		</Compiler>
 		<Unit filename="include/Application.h" />
 		<Unit filename="include/Commands/ChangeView.h" />
+		<Unit filename="include/Commands/MultiCommand.h" />
 		<Unit filename="include/Commands/Sair.h" />
+		<Unit filename="include/Commands/SalvarCommand.h" />
+		<Unit filename="include/Commands/SalvarEMudarView.h" />
 		<Unit filename="include/Controllers/BaseController.h" />
+		<Unit filename="include/Controllers/CenaController.h" />
+		<Unit filename="include/Controllers/NewGameController.h" />
+		<Unit filename="include/Interfaces/ICenaRouter.h" />
 		<Unit filename="include/Interfaces/ICommand.h" />
 		<Unit filename="include/Interfaces/IRunner.h" />
+		<Unit filename="include/Interfaces/ISalvavel.h" />
 		<Unit filename="include/Interfaces/ISerializavel.h" />
 		<Unit filename="include/Interfaces/IViewRouter.h" />
 		<Unit filename="include/Models/BaseModel.h" />
+		<Unit filename="include/Models/CenaModel.h" />
+		<Unit filename="include/Models/CenaViewModel.h" />
+		<Unit filename="include/Models/NewGameViewModel.h" />
+		<Unit filename="include/Models/PersonagemModel.h" />
 		<Unit filename="include/Models/SavedGamesModel.h" />
 		<Unit filename="include/Views/BaseView.h" />
+		<Unit filename="include/Views/CenaView.h" />
 		<Unit filename="include/Views/CreditosView.h" />
 		<Unit filename="include/Views/MenuView.h" />
+		<Unit filename="include/Views/NewGameView.h" />
 		<Unit filename="include/Views/SavedGamesView.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Application.cpp" />
 		<Unit filename="src/Commands/ChangeView.cpp" />
+		<Unit filename="src/Commands/MultiCommand.cpp" />
 		<Unit filename="src/Commands/Sair.cpp" />
+		<Unit filename="src/Commands/SalvarCommand.cpp" />
+		<Unit filename="src/Commands/SalvarEMudarView.cpp" />
 		<Unit filename="src/Controllers/BaseController.cpp" />
+		<Unit filename="src/Controllers/CenaController.cpp" />
+		<Unit filename="src/Controllers/NewGameController.cpp" />
 		<Unit filename="src/Models/BaseModel.cpp" />
+		<Unit filename="src/Models/CenaModel.cpp" />
+		<Unit filename="src/Models/CenaViewModel.cpp" />
+		<Unit filename="src/Models/NewGameViewModel.cpp" />
+		<Unit filename="src/Models/PersonagemModel.cpp" />
 		<Unit filename="src/Models/SavedGamesModel.cpp" />
 		<Unit filename="src/Views/BaseView.cpp" />
+		<Unit filename="src/Views/CenaView.cpp" />
 		<Unit filename="src/Views/CreditosView.cpp" />
 		<Unit filename="src/Views/MenuView.cpp" />
+		<Unit filename="src/Views/NewGameView.cpp" />
 		<Unit filename="src/Views/SavedGamesView.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
