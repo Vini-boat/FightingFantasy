@@ -11,6 +11,7 @@
 
 #include "../include/Commands/Sair.h"
 #include "../include/Commands/ChangeView.h"
+#include "../include/Commands/SalvarCommand.h"
 
 #include <map>
 #include <memory>
@@ -32,8 +33,8 @@ Application::Application()
     this->views["menu"]->addOption("c", new ChangeView(this, "credits"));
     this->views["menu"]->addOption("q", new Sair(this));
 
-    this->views["newgame"] = make_unique<NewGameView>( new NewGameController(this->personagem_atual), new NewGameViewModel);
-
+    this->views["newgame"] = make_unique<NewGameView>(new NewGameController(this->personagem_atual), new NewGameViewModel);
+    this->views["newgame"]->addOption("s", new SalvarCommand(this->personagem_atual));
     this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);

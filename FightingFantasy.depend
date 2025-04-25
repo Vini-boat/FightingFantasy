@@ -3,7 +3,7 @@
 	"./include/Application.h"
 	<iostream>
 
-1745515122 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\application.cpp
+1745526711 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\application.cpp
 	"../include/Application.h"
 	"../include/Views/MenuView.h"
 	"../include/Models/SavedGamesModel.h"
@@ -15,6 +15,7 @@
 	"../include/Controllers/NewGameController.h"
 	"../include/Commands/Sair.h"
 	"../include/Commands/ChangeView.h"
+	"../include/Commands/SalvarCommand.h"
 	<map>
 	<memory>
 	<string>
@@ -117,7 +118,7 @@
 	"CreditosView.h"
 	<iostream>
 
-1745511085 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\models\personagemmodel.cpp
+1745526753 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\models\personagemmodel.cpp
 	"../../include/Models/PersonagemModel.h"
 	<string>
 	<iostream>
@@ -131,12 +132,12 @@
 1745418181 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\iserializavel.h
 	<string>
 
-1745524721 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\controllers\newgamecontroller.cpp
+1745526598 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\controllers\newgamecontroller.cpp
 	"../../include/Controllers/NewGameController.h"
 	"../../include/Models/PersonagemModel.h"
 	<string>
 
-1745514756 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\controllers\newgamecontroller.h
+1745526651 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\controllers\newgamecontroller.h
 	"../Controllers/BaseController.h"
 	"../Models/PersonagemModel.h"
 	<string>
@@ -153,4 +154,21 @@
 
 1745524445 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\models\newgameviewmodel.cpp
 	"NewGameViewModel.h"
+
+1745526543 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\interfaces\isalvavel.h
+
+1745524967 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\views\newgameview.cpp
+	"NewGameView.h"
+	"../../include/Controllers/NewGameController.h"
+	"../../include/Models/NewGameViewModel.h"
+	<string>
+	<iostream>
+
+1745526516 c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\include\commands\salvarcommand.h
+	<ICommand.h>
+	"../Interfaces/Iserializavel.h"
+
+1745526561 source:c:\users\vinicius.bezerra\desktop\dev\fightingfantasy\src\commands\salvarcommand.cpp
+	"SalvarCommand.h"
+	"../../include/Interfaces/ISerializavel.h"
 

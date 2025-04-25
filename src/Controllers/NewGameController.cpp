@@ -20,7 +20,7 @@ void NewGameController::createNewPersonagem(string nome, int habilidade, int ene
     this->model->setHabilidade(habilidade);
     this->model->setEnergia(energia);
     this->model->setSorte(sorte);
-    salvarPersonagem();
+    //this->salvarPersonagem();
 }
 
 void NewGameController::salvarPersonagem()
