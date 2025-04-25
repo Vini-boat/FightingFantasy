@@ -35,11 +35,22 @@ void BaseView::printOptions()
     {
         cout << o.first << endl;
     }
+    for(auto& o: this->variable_options)
+    {
+        cout << o.first << endl;
+    }
 }
 
 void BaseView::executeOption(string shortcut)
 {
     for(auto& o: this->options)
+    {
+        if(shortcut == o.first)
+        {
+            o.second->execute();
+        }
+    }
+    for(auto& o: this->variable_options)
     {
         if(shortcut == o.first)
         {
@@ -69,6 +80,22 @@ string BaseView::getValidOption()
                 return option;
             }
         }
+        for(auto& o: this->variable_options)
+        {
+            if(option == o.first)
+            {
+                return option;
+            }
+        }
         cout << "Opcao invalida, tente novamente" << endl;
     }
+}
+
+void BaseView::addVariableOption(string shortcut, ICommand* command)
+{
+        this->variable_options[shortcut] = command;
+}
+void BaseView::resetVariableOptions()
+{
+    this->variable_options.clear();
 }

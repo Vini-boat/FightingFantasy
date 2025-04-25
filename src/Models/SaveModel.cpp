@@ -19,13 +19,22 @@ SaveModel::~SaveModel()
     //dtor
 }
 
+string SaveModel::getNomePersonagem()
+{
+    return this->personagem;
+}
+
+
+string SaveModel::getCenaAtual()
+{
+    return cena_atual;
+}
 
 void SaveModel::serializar(string filename)
 {
-    this->personagem->serializar(this->personagem->getNome());
     ofstream arq;
     arq.open(filename);
-    arq << "[PERSONAGEM]" << endl << this->personagem->getNome()<< endl;
+    arq << "[PERSONAGEM]" << endl << this->personagem<< endl;
     arq << "[CENAS_PASSADAS]";
     for(string cena : this->cenas_passadas)
     {
@@ -60,8 +69,7 @@ void SaveModel::desserializar(string filename)
 
         if(prop == "personagem")
         {
-            this->personagem = new PersonagemModel;
-            this->personagem->desserializar("./data/personagens/" + line + ".txt");
+            this->personagem = line;
         }
         if(prop == "cenas_passadas")
         {

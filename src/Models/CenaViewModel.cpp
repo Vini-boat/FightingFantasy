@@ -25,7 +25,7 @@ void CenaViewModel::serializar(string filename)
 void CenaViewModel::desserializar(string filename)
 {
     ifstream arq;
-    arq.open("./data/index/cenas.txt");
+    arq.open(filename);
     vector<string> nomes;
     string line;
     while(getline(arq,line))
@@ -41,6 +41,10 @@ void CenaViewModel::desserializar(string filename)
     }
 }
 
+void CenaViewModel::carregarCenas()
+{
+    this->desserializar("./data/index/cenas.txt");
+}
 
 vector<string> CenaViewModel::getNomesCenas()
 {
@@ -74,11 +78,11 @@ string CenaViewModel::getNomeCenaAtual()
     return cena_atual;
 }
 
-vector<string> getCenasEscolhasCenaAtual()
+vector<string> CenaViewModel::getCenasEscolhasCenaAtual()
 {
-
+    return this->cenas[this->cena_atual]->getCenasEscolhas();
 }
-vector<string> getDescricaoEscolhasCenaAtual()
+vector<string> CenaViewModel::getDescricaoEscolhasCenaAtual()
 {
 
 }

@@ -2,7 +2,6 @@
 #define SAVEMODEL_H
 
 #include <BaseModel.h>
-#include "../../include/Models/PersonagemModel.h"
 
 #include "../../include/Interfaces/ISerializavel.h"
 
@@ -19,10 +18,13 @@ class SaveModel : public BaseModel, public ISerializavel
         void serializar(string filename) override;
         void desserializar(string filename) override;
 
+        string getNomePersonagem();
+        string getCenaAtual();
+
     protected:
 
     private:
-        PersonagemModel* personagem;
+        string personagem;
         vector<string> cenas_passadas;
         string cena_atual;
 };

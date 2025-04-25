@@ -21,6 +21,7 @@ class CenaViewModel : public BaseModel, public ISerializavel
         void serializar(string filename) override;
         void desserializar(string filename) override;
 
+        void carregarCenas();
         void setCenaAtual(string cena);
         string getNomeCenaAtual();
         vector<string> getCenasEscolhasCenaAtual();

@@ -18,12 +18,13 @@ SavedGamesModel::~SavedGamesModel()
 vector<string> SavedGamesModel::getSavedGamesNames()
 {
     ifstream arq;
-    arq.open("./data/index/personagens.txt");
-
+    arq.open("./data/index/saves.txt");
+    vector<string> names;
     string line;
     while(getline(arq, line))
     {
         names.push_back(line);
     }
     return names;
+    arq.close();
 }

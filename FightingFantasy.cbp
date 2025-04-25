@@ -49,7 +49,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Application.h" />
-		<Unit filename="include/Command/CarregarSave.h" />
+		<Unit filename="include/Commands/CarregarSave.h" />
+		<Unit filename="include/Commands/CarregarSaveEMudarView.h" />
 		<Unit filename="include/Commands/ChangeCena.h" />
 		<Unit filename="include/Commands/ChangeView.h" />
 		<Unit filename="include/Commands/MultiCommand.h" />
@@ -59,6 +60,7 @@
 		<Unit filename="include/Controllers/BaseController.h" />
 		<Unit filename="include/Controllers/CenaController.h" />
 		<Unit filename="include/Controllers/NewGameController.h" />
+		<Unit filename="include/Controllers/SaveController.h" />
 		<Unit filename="include/Interfaces/ICenaRouter.h" />
 		<Unit filename="include/Interfaces/ICommand.h" />
 		<Unit filename="include/Interfaces/IRunner.h" />
@@ -70,6 +72,7 @@
 		<Unit filename="include/Models/CenaViewModel.h" />
 		<Unit filename="include/Models/NewGameViewModel.h" />
 		<Unit filename="include/Models/PersonagemModel.h" />
+		<Unit filename="include/Models/SaveModel.h" />
 		<Unit filename="include/Models/SavedGamesModel.h" />
 		<Unit filename="include/Views/BaseView.h" />
 		<Unit filename="include/Views/CenaView.h" />
@@ -79,7 +82,8 @@
 		<Unit filename="include/Views/SavedGamesView.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Application.cpp" />
-		<Unit filename="src/Command/CarregarSave.cpp" />
+		<Unit filename="src/Commands/CarregarSave.cpp" />
+		<Unit filename="src/Commands/CarregarSaveEMudarView.cpp" />
 		<Unit filename="src/Commands/ChangeCena.cpp" />
 		<Unit filename="src/Commands/ChangeView.cpp" />
 		<Unit filename="src/Commands/MultiCommand.cpp" />
@@ -89,11 +93,13 @@
 		<Unit filename="src/Controllers/BaseController.cpp" />
 		<Unit filename="src/Controllers/CenaController.cpp" />
 		<Unit filename="src/Controllers/NewGameController.cpp" />
+		<Unit filename="src/Controllers/SaveController.cpp" />
 		<Unit filename="src/Models/BaseModel.cpp" />
 		<Unit filename="src/Models/CenaModel.cpp" />
 		<Unit filename="src/Models/CenaViewModel.cpp" />
 		<Unit filename="src/Models/NewGameViewModel.cpp" />
 		<Unit filename="src/Models/PersonagemModel.cpp" />
+		<Unit filename="src/Models/SaveModel.cpp" />
 		<Unit filename="src/Models/SavedGamesModel.cpp" />
 		<Unit filename="src/Views/BaseView.cpp" />
 		<Unit filename="src/Views/CenaView.cpp" />

@@ -4,24 +4,29 @@
 #include <BaseController.h>
 #include "../../include/Models/CenaViewModel.h"
 #include "../../include/Interfaces/ICenaRouter.h"
+#include "../../include/Models/SaveModel.h"
 
+#include <vector>
+#include <string>
 
+using namespace std;
 class CenaController : public BaseController, public ICenaRouter
 {
     public:
-        CenaController(CenaViewModel* model);
+        CenaController(CenaViewModel* model, SaveModel* save);
         virtual ~CenaController();
 
         virtual void changeCena(string cena) override;
         string getCenaText();
         string getCenaName();
-        //vector<string>
-
+        vector<string> getEscolhasCena();
+        virtual void carregarSave() override;
 
     protected:
 
     private:
         CenaViewModel* model;
+        SaveModel* save;
 };
 
 #endif // CENACONTROLLER_H

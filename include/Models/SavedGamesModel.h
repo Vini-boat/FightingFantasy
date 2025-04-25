@@ -15,7 +15,6 @@ class SavedGamesModel : public BaseModel
     protected:
 
     private:
-        vector<string> names;
 };
 
 #endif // SAVEDGAMESMODEL_H

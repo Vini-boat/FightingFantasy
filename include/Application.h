@@ -10,6 +10,7 @@
 #include "../include/Controllers/BaseController.h"
 #include "../include/Models/BaseModel.h"
 #include "../include/Models/PersonagemModel.h"
+#include "../include/Models/SaveModel.h"
 #include "../include/Views/BaseView.h"
 
 #include "../include/Models/SavedGamesModel.h"
@@ -35,7 +36,7 @@ class Application: public IRunner, public IViewRouter
         SavedGamesModel* saved_games_model;
         string current_view;
         PersonagemModel* personagem_atual;
-
+        SaveModel* save;
 };
 
 #endif // APPLICATION_H

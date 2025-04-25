@@ -14,7 +14,10 @@
 #include "../include/Commands/ChangeView.h"
 #include "../include/Commands/SalvarCommand.h"
 #include "../include/Commands/SalvarEMudarView.h"
+#include "../include/Commands/CarregarSaveEMudarView.h"
 #include "../include/Commands/CarregarSave.h"
+
+#include "../include/Views/CenaView.h"
 
 #include "../include/Models/CenaViewModel.h"
 #include "../include/Models/SaveModel.h"
@@ -32,6 +35,7 @@ Application::Application()
 
     this->saved_games_model = new SavedGamesModel;
 
+    this->save = new SaveModel;
     this->personagem_atual = new PersonagemModel;
 
     this->views["menu"] = make_unique<MenuView>();
@@ -44,15 +48,23 @@ Application::Application()
     NewGameController* new_game_controller = new NewGameController(new_game_view_model, this->personagem_atual);
     this->views["newgame"] = make_unique<NewGameView>(new_game_controller, new_game_view_model);
 
-    this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"credits"));
+    this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"cenas"));
     this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
-
-    this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
-    this->views["savedgames"]->addOption("c", new CarregarSave());
-    this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["credits"] = make_unique<CreditosView>();
     this->views["credits"]->addOption("v", new ChangeView(this, "menu"));
+
+    CenaViewModel* cena_view_model = new CenaViewModel;
+    cena_view_model->carregarCenas();
+    CenaController* cena_controller = new CenaController(cena_view_model,save);
+    this->views["cenas"] = make_unique<CenaView>(cena_controller);
+    this->views["cenas"]->addOption("m", new ChangeView(this, "menu"));
+
+    this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
+    this->views["savedgames"]->addOption("c", new CarregarSaveEMudarView(cena_controller, save,personagem_atual,"ex_savegame",this,"cenas"));
+    this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
+
+
 }
 
 Application::~Application()
@@ -79,6 +91,8 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    SaveModel game;
-    game.desserializar("./ex_savegame.txt");
+    save = new SaveModel;
+    personagem_atual = new PersonagemModel;
+    //ICommand* carregar = new CarregarSave(save,personagem_atual,"ex_savegame");
+    //carregar->execute();
 }

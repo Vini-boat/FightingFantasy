@@ -1,10 +1,15 @@
 #include "CenaController.h"
 #include "../../include/Models/CenaViewModel.h"
+#include "../../include/Models/SaveModel.h"
 
+#include <vector>
+#include <string>
 
-CenaController::CenaController(CenaViewModel* model)
+using namespace std;
+CenaController::CenaController(CenaViewModel* model, SaveModel* save)
 {
     this->model = model;
+    this->save = save;
 }
 
 CenaController::~CenaController()
@@ -24,4 +29,14 @@ string CenaController::getCenaText()
 string CenaController::getCenaName()
 {
     return this->model->getNomeCenaAtual();
+}
+
+void CenaController::carregarSave()
+{
+    this->model->setCenaAtual(this->save->getCenaAtual());
+}
+
+vector<string> CenaController::getEscolhasCena()
+{
+    return this->model->getCenasEscolhasCenaAtual();
 }

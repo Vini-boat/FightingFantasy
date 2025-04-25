@@ -21,8 +21,14 @@ class BaseView
         void showCursor();
         string getValidOption();
         void executeOption(string shortcut);
+
     protected:
         map<string,ICommand*> options;
+        map<string,ICommand*> variable_options;
+
+        void addVariableOption(string shortcut, ICommand* command);
+        void resetVariableOptions();
+
     private:
 };
 
