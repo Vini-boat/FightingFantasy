@@ -1,0 +1,5 @@
+"O Demonio do Veu estende sua mao com garras flamejantes e tenta acertar você com um ataque devastador. O calor e insuportavel."
+
+Pontos de Vida (PV): 40
+Habilidade (H): 8
+Rec: ~100 moedas

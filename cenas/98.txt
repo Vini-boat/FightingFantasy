@@ -1,0 +1,5 @@
+"A gargula abre suas asas, e com um grito gutural, ela ataca, tentando te arranhar com suas garras afiadas."
+
+Pontos de Vida (PV): 15
+Habilidade (H): 6
+Rec: ~40 moedas

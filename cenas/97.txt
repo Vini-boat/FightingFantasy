@@ -1,0 +1,5 @@
+"O Goblin levanta sua espada e ataca com furia. Ele tenta atingir seu peito com um golpe rapido."
+
+Pontos de Vida (PV): 10
+Habilidade (H): 4
+Rec: ~10 moedas

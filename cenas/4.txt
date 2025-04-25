@@ -1,0 +1,7 @@
+Vasculhando a sala inicial, você encontra algo escondido sob um entulho de pedras:
+Uma Pequena Runa Branca envolta em pano. Ela pulsa levemente quando chega perto da sua marca no peito.
+
+id I: Runa Branca;c;0;0;0
+
+#2: Ir para a passagem da direita
+#3: Ir para a esquerda, onde o vento sopra

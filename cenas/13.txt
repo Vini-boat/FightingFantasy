@@ -1,0 +1,5 @@
+Procurando ao redor, nota um artefato com inscricoes demoniacas. Em sua mao, um Amuleto Abissal. Ao tocalo, visoes do passado inundam sua mente: você foi um campeão sacrificado para selar o demonio que agora desperta. Voce se sente fora de controle
+
+id I: Amuleto Abissal ;c;0;0;0(Amaldiçoado)
+
+#14: Adentrar a cachoeira

@@ -1,15 +1,19 @@
 - [ ] Tela de Abertura
   - [ ] Novo jogo
+    - [X] Formulário
     - [ ] Limitar pontos de atributo
   - [ ] Carregar jogo salvo
-  - [ ] Créditos
-  - [ ] Sair
+    - [X] Listar Jogos
+    - [ ] Carregar Jogo	  
+  - [X] Créditos
+  - [X] Sair
 - [ ] Tela de inventário
   - [ ] Listar atributos
   - [ ] Listar Itens
   - [ ] Usar provisões
 - [ ] Tela Padrão (Cena)
   - [ ] CenaRouter
+  - [ ] Salvar Automaticamente
 - [ ] Tela Combate
   - [ ] Monstro
   - [ ] Atacar
