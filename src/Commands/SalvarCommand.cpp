@@ -1,9 +1,9 @@
 #include "SalvarCommand.h"
-#include "../../include/Interfaces/ISerializavel.h"
+#include "../../include/Interfaces/ISalvavel.h"
 
-SalvarCommand::SalvarCommand(ISerializavel* serializavel)
+SalvarCommand::SalvarCommand(ISalvavel* salvavel)
 {
-    this->serializavel = serializavel;
+    this->salvavel = salvavel;
 }
 
 SalvarCommand::~SalvarCommand()
@@ -13,5 +13,5 @@ SalvarCommand::~SalvarCommand()
 
 void SalvarCommand::execute()
 {
-    this->serializavel->serializar("p1.txt");
+    this->salvavel->salvar();
 }

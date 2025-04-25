@@ -98,11 +98,8 @@ void NewGameView::handleInput()
         }
     case 4:
         {
-
-
             string t = getValidOption();
             executeOption(t);
-            this->controller->createNewPersonagem(this->model->getNome(), this->model->getHabilidade(),this->model->getEnergia(), this->model->getSorte());
             break;
         }
     }

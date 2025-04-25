@@ -2,18 +2,18 @@
 #define SALVARCOMMAND_H
 
 #include <ICommand.h>
-#include "../Interfaces/Iserializavel.h"
+#include "../Interfaces/ISalvavel.h"
 
 class SalvarCommand : public ICommand
 {
     public:
-        SalvarCommand(ISerializavel* serializavel);
+        SalvarCommand(ISalvavel* salvavel);
         virtual ~SalvarCommand();
         void execute() override;
     protected:
 
     private:
-        ISerializavel* serializavel;
+        ISalvavel* salvavel;
 };
 
 #endif // SALVARCOMMAND_H

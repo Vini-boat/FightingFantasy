@@ -1,4 +1,4 @@
-#include "NewGameViewModel.h"
+#include "../../include/Models/NewGameViewModel.h"
 
 NewGameViewModel::NewGameViewModel()
 {

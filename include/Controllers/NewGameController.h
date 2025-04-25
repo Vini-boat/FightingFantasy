@@ -3,19 +3,21 @@
 
 #include "../Controllers/BaseController.h"
 #include "../Models/PersonagemModel.h"
+#include "../Models/NewGameViewModel.h"
+#include "../Interfaces/ISalvavel.h"
 
 
 #include <string>
 
 using namespace std;
-class NewGameController : public BaseController
+class NewGameController : public BaseController, public ISalvavel
 {
     public:
-        NewGameController(PersonagemModel* model);
+        NewGameController(NewGameViewModel* view_model, PersonagemModel* model);
         virtual ~NewGameController();
 
-        void createNewPersonagem(string nome, int habilidade, int energia, int sorte);
-        void salvarPersonagem();
+        void createNewPersonagem();
+        void salvar() override;
 
         bool validarHabilidade(int habilidade);
         bool validarEnergia(int energia);
@@ -26,6 +28,7 @@ class NewGameController : public BaseController
     protected:
 
     private:
+        NewGameViewModel* view_model;
         PersonagemModel* model;
 };
 

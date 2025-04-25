@@ -1,11 +1,13 @@
 #include "../../include/Controllers/NewGameController.h"
 #include "../../include/Models/PersonagemModel.h"
+#include "../../include/Models/NewGameViewModel.h"
 
 #include <string>
 
 using namespace std;
-NewGameController::NewGameController(PersonagemModel* model)
+NewGameController::NewGameController(NewGameViewModel* view_model, PersonagemModel* model)
 {
+    this->view_model = view_model;
     this->model = model;
 }
 
@@ -14,18 +16,19 @@ NewGameController::~NewGameController()
     //dtor
 }
 
-void NewGameController::createNewPersonagem(string nome, int habilidade, int energia, int sorte)
+void NewGameController::createNewPersonagem()
 {
-    this->model->setNome(nome);
-    this->model->setHabilidade(habilidade);
-    this->model->setEnergia(energia);
-    this->model->setSorte(sorte);
+    this->model->setNome(this->view_model->getNome());
+    this->model->setHabilidade(this->view_model->getHabilidade());
+    this->model->setEnergia(this->view_model->getEnergia());
+    this->model->setSorte(this->view_model->getSorte());
     //this->salvarPersonagem();
 }
 
-void NewGameController::salvarPersonagem()
+void NewGameController::salvar()
 {
-    this->model->serializar("./Personagens/p1.txt");
+    this->createNewPersonagem();
+    this->model->serializar("./data/personagens/p1.txt");
 }
 
 
