@@ -1,12 +1,14 @@
 #include "../../include/Controllers/NewGameController.h"
 #include "../../include/Models/PersonagemModel.h"
 #include "../../include/Models/NewGameViewModel.h"
+#include "../../include/Models/SaveModel.h"
 
 #include <string>
 
 using namespace std;
-NewGameController::NewGameController(NewGameViewModel* view_model, PersonagemModel* model)
+NewGameController::NewGameController(SaveModel* save, NewGameViewModel* view_model, PersonagemModel* model)
 {
+    this->save = save;
     this->view_model = view_model;
     this->model = model;
 }
@@ -30,6 +32,9 @@ void NewGameController::salvar()
     this->createNewPersonagem();
     string filename = "./data/personagens/" + this->view_model->getNome() + ".txt";
     this->model->serializar(filename);
+    this->save->reset();
+    this->save->setPersonagem(this->view_model->getNome());
+    this->save->serializar("./data/saves/ex_savegame.txt");
 }
 
 

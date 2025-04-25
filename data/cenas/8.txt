@@ -1,0 +1,9 @@
+[TEXTO]
+Voce analisa os símbolos pintados com sangue. Sao escritos antigos… mas algo dentro de voce entende:
+"Somente aquele que ja morreu pode atravessar o Veu e confrontar o Fogo."
+
+As palavras ativam um lampejo de memoria: eu… foi sacrificado?
+[ESCOLHAS]
+10: Seguir adiante
+6: Entrar na porta de atalho 
+[FINAL]

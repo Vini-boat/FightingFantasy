@@ -23,9 +23,17 @@ void CenaView::show()
     limparTela();
     cout << "======== CENA =========" << endl;
     cout << endl;
-    cout << "   Nome: " << this->controller->getCenaName() << endl;
+    cout << this->controller->getCenaText() << endl;
     cout << endl;
-    printOptions();
+    int i =0;
+    for(string e: this->controller->getDescricaoEscolhasCena())
+    {
+        cout << "   " << i << ": " <<  e << endl;
+        i++;
+    }
+    cout << "   m: Voltar para o Menu" << endl;
+    cout << endl;
+    cout << "--------------------------------" << endl;
 }
 
 void CenaView::handleInput()

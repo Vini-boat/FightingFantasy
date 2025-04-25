@@ -27,6 +27,7 @@ void SavedGamesView::show()
         i++;
     }
     cout << endl;
+    cout << "   c: Carregar Jogo" << endl;
     cout << "   v: Voltar" << endl;
     cout << "------------------------------" << endl;
 }

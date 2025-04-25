@@ -64,6 +64,10 @@ void CenaModel::desserializar(string filename)
             atributo = "escolhas";
             continue;
         }
+        if(line == "[FINAL]")
+        {
+            break;
+        }
 
         if(atributo == "texto")
         {

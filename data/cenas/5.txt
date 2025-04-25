@@ -1,0 +1,7 @@
+[TEXTO]
+O caminho adiante se divide em duas rotas. Ha tambem uma parede com simbolos em sangue seco e tambem encontra o que parece ser uma porta de atalho!
+[ESCOLHAS]
+10: Seguir pela trilha da direita, onde gotas d agua ecoam
+6: Entrar na porta de atalho
+8: Vasculhar os símbolos na parede
+[FINAL]

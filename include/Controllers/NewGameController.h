@@ -5,6 +5,7 @@
 #include "../Models/PersonagemModel.h"
 #include "../Models/NewGameViewModel.h"
 #include "../Interfaces/ISalvavel.h"
+#include "../Models/SaveModel.h"
 
 
 #include <string>
@@ -13,7 +14,7 @@ using namespace std;
 class NewGameController : public BaseController, public ISalvavel
 {
     public:
-        NewGameController(NewGameViewModel* view_model, PersonagemModel* model);
+        NewGameController(SaveModel* save, NewGameViewModel* view_model, PersonagemModel* model);
         virtual ~NewGameController();
 
         void createNewPersonagem();
@@ -28,6 +29,7 @@ class NewGameController : public BaseController, public ISalvavel
     protected:
 
     private:
+        SaveModel* save;
         NewGameViewModel* view_model;
         PersonagemModel* model;
 };

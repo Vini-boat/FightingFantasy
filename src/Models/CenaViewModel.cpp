@@ -14,7 +14,7 @@ CenaViewModel::CenaViewModel()
 
 CenaViewModel::~CenaViewModel()
 {
-    //dtor
+    this->cena_atual = "1";
 }
 
 void CenaViewModel::serializar(string filename)
@@ -73,6 +73,11 @@ void CenaViewModel::setCenaAtual(string cena)
     this->cena_atual = cena;
 }
 
+string CenaViewModel::getTextoCenaAtual()
+{
+    return this->cenas[this->cena_atual]->getText();
+}
+
 string CenaViewModel::getNomeCenaAtual()
 {
     return cena_atual;
@@ -84,5 +89,5 @@ vector<string> CenaViewModel::getCenasEscolhasCenaAtual()
 }
 vector<string> CenaViewModel::getDescricaoEscolhasCenaAtual()
 {
-
+    return this->cenas[this->cena_atual]->getDescricaoEscolhas();
 }

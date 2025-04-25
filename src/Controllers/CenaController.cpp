@@ -32,7 +32,7 @@ void CenaController::salvar()
 
 string CenaController::getCenaText()
 {
-    //return this->model->
+    return this->model->getTextoCenaAtual();
 }
 string CenaController::getCenaName()
 {
@@ -47,4 +47,9 @@ void CenaController::carregarSave()
 vector<string> CenaController::getEscolhasCena()
 {
     return this->model->getCenasEscolhasCenaAtual();
+}
+
+vector<string> CenaController::getDescricaoEscolhasCena()
+{
+    return this->model->getDescricaoEscolhasCenaAtual();
 }

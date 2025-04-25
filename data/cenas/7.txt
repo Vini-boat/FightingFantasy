@@ -1,0 +1,8 @@
+[TEXTO]
+Ao tocar o pedestal,vem um fragmento de memoria. Voce esta preso, diante de eremitas… um portal surge. Um sacrificio? apos vislumbrar encima do pedestal ha uma chave
+
+id I: Chave Prateada;c;0;0;0
+id I: Fragmento de Memória;c;0;0;0
+[ESCOLHAS]
+9: Seguir pelo corredor escuro
+[FINAL]

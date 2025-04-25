@@ -1,0 +1,8 @@
+[TEXTO]
+Voce entra no corredor escuro. Ele se estende por metros, ate encontrar uma porta de ferro antiga com uma fechadura enferrujada.
+O colar em seu pescoço vibra — algo atras daquela porta esta vivo.
+[ESCOLHAS]
+11: Usar a chave prateada na porta
+12: Bater com força, Dando uma ombrada
+9: Vasculhar ao redor da porta antes de agir
+[FINAL]

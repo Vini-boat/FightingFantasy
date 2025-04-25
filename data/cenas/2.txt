@@ -1,9 +1,9 @@
 [TEXTO]
-CENA 2
+Voce entrou em uma caverna. No chao, correntes partidas. Ha sinais de lutas, sangue seco, pegadas pequenas... E entao:
+Um goblin salta das sombras, rosnando com um punhal em maos!
 
-teste
-kkk
-
+(TC – Combate com Goblin)
 [ESCOLHAS]
-1: Voltar
-3: Ir pro 3
+5: Continuar apos derrota-lo
+10: correr com medo que apareça mais goblins (voce corre sem olhar para traz!)
+[FINAL]

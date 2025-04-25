@@ -40,6 +40,19 @@ void SaveModel::setCenaAtual(string cena)
     this->cena_atual = cena;
 }
 
+void SaveModel::reset()
+{
+    this->personagem = "";
+    this->cenas_passadas.clear();
+    this->cenas_passadas.push_back("1");
+    this->cena_atual = "1";
+}
+
+void SaveModel::setPersonagem(string personagem)
+{
+    this->personagem = personagem;
+}
+
 void SaveModel::serializar(string filename)
 {
     ofstream arq;

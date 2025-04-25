@@ -24,6 +24,7 @@ class CenaViewModel : public BaseModel, public ISerializavel
         void carregarCenas();
         void setCenaAtual(string cena);
         string getNomeCenaAtual();
+        string getTextoCenaAtual();
         vector<string> getCenasEscolhasCenaAtual();
         vector<string> getDescricaoEscolhasCenaAtual();
 

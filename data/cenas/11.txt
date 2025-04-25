@@ -1,0 +1,9 @@
+[TEXTO]
+Voce insere a chave prateada na fechadura. Ela gira com facilidade. A porta se abre com um rangido. Mas uma GARGULA esta adormecida e não acorda com o barulho minimo
+voce esta atento!
+
+#: Matar furtivamente(HIT KILL)
+[ESCOLHAS]
+14: Seguir pelo arco no fundo da sala
+10: sair por outro caminho escuro
+[FINAL]

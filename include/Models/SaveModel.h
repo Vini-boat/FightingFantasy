@@ -23,6 +23,9 @@ class SaveModel : public BaseModel, public ISerializavel
         void addCenaPassada(string cena);
         void setCenaAtual(string cena);
 
+        void reset();
+        void setPersonagem(string personagem);
+
     protected:
 
     private:

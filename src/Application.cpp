@@ -45,10 +45,10 @@ Application::Application()
     this->views["menu"]->addOption("q", new Sair(this));
 
     NewGameViewModel* new_game_view_model = new NewGameViewModel;
-    NewGameController* new_game_controller = new NewGameController(new_game_view_model, this->personagem_atual);
+    NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
     this->views["newgame"] = make_unique<NewGameView>(new_game_controller, new_game_view_model);
 
-    this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"cenas"));
+    this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"savedgames"));
     this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["credits"] = make_unique<CreditosView>();
