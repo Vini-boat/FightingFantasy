@@ -31,6 +31,7 @@ void CenaView::show()
         cout << "   " << i << ": " <<  e << endl;
         i++;
     }
+    cout << endl;
     cout << "   i: Inventario" << endl;
     cout << "   m: Voltar para o Menu" << endl;
     cout << endl;

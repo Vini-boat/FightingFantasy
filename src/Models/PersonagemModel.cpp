@@ -52,7 +52,6 @@ int PersonagemModel::getSorte()
 
 void PersonagemModel::serializar(string filename)
 {
-    cout << "Modlel" << endl;
     ofstream arquivo;
     arquivo.open(filename);
     arquivo << this->nome << endl;
@@ -60,6 +59,11 @@ void PersonagemModel::serializar(string filename)
     arquivo << this->energia << endl;
     arquivo << this->sorte << endl;
     arquivo.close();
+
+    ofstream index;
+    index.open("./data/index/saves.txt");
+    index << this->nome << endl;
+    index.close();
 }
 
 void PersonagemModel::desserializar(string filename)

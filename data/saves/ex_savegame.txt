@@ -1,12 +1,6 @@
 [PERSONAGEM]
-Raphael
+Vini
 [CENAS_PASSADAS]
 1
-1
-2
-5
-10
-13
-14
 [CENA_ATUAL]
-14
+1
