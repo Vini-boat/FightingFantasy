@@ -12,10 +12,12 @@
 #include "../include/Commands/Sair.h"
 #include "../include/Commands/ChangeView.h"
 #include "../include/Commands/SalvarCommand.h"
+#include "../include/Commands/MultiCommand.h"
 
 #include <map>
 #include <memory>
 #include <string>
+#include <iostream>
 
 using namespace std;
 Application::Application()
@@ -37,7 +39,12 @@ Application::Application()
     NewGameController* new_game_controller = new NewGameController(new_game_view_model, this->personagem_atual);
     this->views["newgame"] = make_unique<NewGameView>(new_game_controller, new_game_view_model);
 
-    this->views["newgame"]->addOption("s", new SalvarCommand(new_game_controller));
+    ICommand* salvar = new SalvarCommand(new_game_controller);
+    this->views["newgame"]->addOption("s", new MultiCommand(
+                                        salvar,
+                                        new ChangeView(this, "credits")
+                                                            )
+                                      );
     this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
