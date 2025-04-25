@@ -22,6 +22,7 @@ class Application: public IRunner, public IViewRouter
         virtual ~Application() override;
         void run() override;
         void stop() override;
+        void debug();
 
         void changeCurrentView(string view_name) override;
     protected:

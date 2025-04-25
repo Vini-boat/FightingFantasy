@@ -2,12 +2,12 @@
 #include <string>
 #include <vector>
 
+#include <fstream>
+
 using namespace std;
 SavedGamesModel::SavedGamesModel()
 {
-    names.push_back("teste1");
-    names.push_back("teste2");
-    names.push_back("teste3");
+
 }
 
 SavedGamesModel::~SavedGamesModel()
@@ -17,5 +17,13 @@ SavedGamesModel::~SavedGamesModel()
 
 vector<string> SavedGamesModel::getSavedGamesNames()
 {
+    ifstream arq;
+    arq.open("./data/index/personagens.txt");
+
+    string line;
+    while(getline(arq, line))
+    {
+        names.push_back(line);
+    }
     return names;
 }

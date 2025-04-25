@@ -28,7 +28,8 @@ void NewGameController::createNewPersonagem()
 void NewGameController::salvar()
 {
     this->createNewPersonagem();
-    this->model->serializar("./data/personagens/p1.txt");
+    string filename = "./data/personagens/" + this->view_model->getNome() + ".txt";
+    this->model->serializar(filename);
 }
 
 

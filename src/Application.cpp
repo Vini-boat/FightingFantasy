@@ -5,6 +5,7 @@
 #include "../include/Views/SavedGamesView.h"
 #include "../include/Views/NewGameView.h"
 #include "../include/Models/NewGameViewModel.h"
+#include "../include/Models/CenaModel.h"
 #include "../include/Views/CreditosView.h"
 
 #include "../include/Controllers/NewGameController.h"
@@ -13,6 +14,8 @@
 #include "../include/Commands/ChangeView.h"
 #include "../include/Commands/SalvarCommand.h"
 #include "../include/Commands/SalvarEMudarView.h"
+
+#include "../include/Models/CenaViewModel.h"
 
 #include <map>
 #include <memory>
@@ -69,4 +72,15 @@ void Application::run()
 void Application::changeCurrentView(string view_name)
 {
     this->current_view = view_name;
+}
+
+void Application::debug()
+{
+    CenaViewModel model;
+    vector<string> nomes = model.getTextoCenas();
+    for(string nome : nomes)
+    {
+        cout << nome << endl;
+    }
+
 }

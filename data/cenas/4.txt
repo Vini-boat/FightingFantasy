@@ -1,0 +1,8 @@
+[TEXTO]
+CENA 4
+final
+
+[ESCOLHAS]
+1: Voltar
+2: Ir pra 2
+3: Ir pra 3

@@ -1,0 +1,9 @@
+[TEXTO]
+CENA 2
+
+teste
+kkk
+
+[ESCOLHAS]
+1: Voltar
+3: Ir pro 3

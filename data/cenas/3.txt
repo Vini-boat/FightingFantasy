@@ -1,0 +1,9 @@
+[TEXTO]
+CENA 3
+
+testzinho kkk
+
+
+[ESCOLHAS]
+1: Voltar
+4: Ir pra 4
