@@ -1,0 +1,15 @@
+[NOME]
+nome personagem
+[HABILIDADE]
+6
+[ENERGIA]
+12
+[SORTE]
+6
+[TESOURO]
+100
+[PROVISOES]
+4
+[EQUIPAMENTOS]
+[]0
+[X]1

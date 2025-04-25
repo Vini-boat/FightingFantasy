@@ -16,7 +16,4 @@ void CenaController::changeCena(string cena)
 {
     this->model->setCenaAtual(cena);
 }
-string CenaController::getCurrentCenaName()
-{
-    this->model->getCenaAtual();
-}
+

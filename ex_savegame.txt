@@ -1,0 +1,9 @@
+[PERSONAGEM]
+p1
+[CENAS]
+1
+2
+3
+1
+2
+3

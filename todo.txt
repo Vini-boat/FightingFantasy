@@ -1,0 +1,18 @@
+- [ ] Tela de Abertura
+  - [ ] Novo jogo
+    - [ ] Limitar pontos de atributo
+  - [ ] Carregar jogo salvo
+  - [ ] Créditos
+  - [ ] Sair
+- [ ] Tela de inventário
+  - [ ] Listar atributos
+  - [ ] Listar Itens
+  - [ ] Usar provisões
+- [ ] Tela Padrão (Cena)
+  - [ ] CenaRouter
+- [ ] Tela Combate
+  - [ ] Monstro
+  - [ ] Atacar
+  - [ ] Usar Item
+  - [ ] Fugir
+  - [ ] Usar Sorte

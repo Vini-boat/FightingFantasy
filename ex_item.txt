@@ -1,0 +1,8 @@
+[NOME]
+nome item
+[TIPO]
+arma
+[COMBATE]
+1
+[MODIFICADOR]
+2
