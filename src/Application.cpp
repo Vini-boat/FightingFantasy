@@ -14,6 +14,7 @@
 #include "../include/Commands/ChangeView.h"
 #include "../include/Commands/SalvarCommand.h"
 #include "../include/Commands/SalvarEMudarView.h"
+#include "../include/Commands/CarregarSave.h"
 
 #include "../include/Models/CenaViewModel.h"
 
@@ -46,6 +47,7 @@ Application::Application()
     this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
+    this->views["savedgames"]->addOption("c", new CarregarSave());
     this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["credits"] = make_unique<CreditosView>();

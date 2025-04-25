@@ -20,6 +20,7 @@
 					<Add directory="include/Views/" />
 					<Add directory="include/Controllers" />
 					<Add directory="include/Models" />
+					<Add directory="include/Command" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -36,6 +37,7 @@
 					<Add directory="include/Views/" />
 					<Add directory="include/Controllers" />
 					<Add directory="include/Models" />
+					<Add directory="include/Command" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -47,6 +49,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Application.h" />
+		<Unit filename="include/Command/CarregarSave.h" />
+		<Unit filename="include/Commands/ChangeCena.h" />
 		<Unit filename="include/Commands/ChangeView.h" />
 		<Unit filename="include/Commands/MultiCommand.h" />
 		<Unit filename="include/Commands/Sair.h" />
@@ -75,6 +79,8 @@
 		<Unit filename="include/Views/SavedGamesView.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Application.cpp" />
+		<Unit filename="src/Command/CarregarSave.cpp" />
+		<Unit filename="src/Commands/ChangeCena.cpp" />
 		<Unit filename="src/Commands/ChangeView.cpp" />
 		<Unit filename="src/Commands/MultiCommand.cpp" />
 		<Unit filename="src/Commands/Sair.cpp" />
