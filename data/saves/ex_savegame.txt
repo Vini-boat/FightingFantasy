@@ -1,13 +1,12 @@
 [PERSONAGEM]
-teste
+Raphael
 [CENAS_PASSADAS]
 1
 1
-4
 2
 5
-8
 10
+13
 14
 [CENA_ATUAL]
 14

@@ -17,6 +17,9 @@
 #include "../include/Commands/CarregarSaveEMudarView.h"
 #include "../include/Commands/CarregarSave.h"
 
+#include "../include/Views/InventarioView.h"
+#include "../include/Controllers/InventarioController.h"
+
 #include "../include/Views/CenaView.h"
 
 #include "../include/Models/CenaViewModel.h"
@@ -58,11 +61,15 @@ Application::Application()
     cena_view_model->carregarCenas();
     CenaController* cena_controller = new CenaController(cena_view_model,save);
     this->views["cenas"] = make_unique<CenaView>(cena_controller);
+    this->views["cenas"]->addOption("i", new ChangeView(this, "inventario"));
     this->views["cenas"]->addOption("m", new ChangeView(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
     this->views["savedgames"]->addOption("c", new CarregarSaveEMudarView(cena_controller, save,personagem_atual,"ex_savegame",this,"cenas"));
     this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
+
+    this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual);
+    this->views["inventario"]->addOption("v", new ChangeView(this, "cenas"));
 
 
 }
