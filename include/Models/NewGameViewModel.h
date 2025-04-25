@@ -1,7 +1,7 @@
 #ifndef NEWGAMEVIEWMODEL_H
 #define NEWGAMEVIEWMODEL_H
 
-#include <BaseModel.h>
+#include "../Models/BaseModel.h"
 #include <string>
 
 using namespace std;

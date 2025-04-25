@@ -1,0 +1,48 @@
+# Binários e intermediários
+*.exe
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+*.out
+
+# Arquivos de depuração
+*.d
+*.dbg
+*.gch
+*.gcno
+*.gcda
+*.gcov
+
+# Arquivos específicos do Code::Blocks
+*.depend
+*.layout
+*.layout.save
+*.cbTemp
+*.cbn
+*.autosave
+
+# Diretórios comuns de build
+/bin/
+/build/
+/debug/
+/release/
+
+# Arquivos de backup do editor
+*~
+*.swp
+*.bak
+
+# Outros arquivos temporários
+*.log
+*.user
+*.tags
+
+# VS Code (caso use junto)
+.vscode/
+
+# MacOS / Linux / Windows extras
+.DS_Store
+Thumbs.db
