@@ -20,6 +20,8 @@ class SaveModel : public BaseModel, public ISerializavel
 
         string getNomePersonagem();
         string getCenaAtual();
+        void addCenaPassada(string cena);
+        void setCenaAtual(string cena);
 
     protected:
 

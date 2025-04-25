@@ -20,6 +20,14 @@ CenaController::~CenaController()
 void CenaController::changeCena(string cena)
 {
     this->model->setCenaAtual(cena);
+    this->save->addCenaPassada(cena);
+    this->save->setCenaAtual(cena);
+    this->salvar();
+}
+
+void CenaController::salvar()
+{
+    this->save->serializar("./data/saves/ex_savegame.txt");
 }
 
 string CenaController::getCenaText()

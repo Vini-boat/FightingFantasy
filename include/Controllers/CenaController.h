@@ -17,6 +17,7 @@ class CenaController : public BaseController, public ICenaRouter
         virtual ~CenaController();
 
         virtual void changeCena(string cena) override;
+        void salvar();
         string getCenaText();
         string getCenaName();
         vector<string> getEscolhasCena();

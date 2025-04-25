@@ -3,9 +3,12 @@ p1
 [CENAS_PASSADAS]
 1
 2
-3
+1
+4
 1
 2
 3
-[CENA_ATUAL]
 4
+1
+[CENA_ATUAL]
+1

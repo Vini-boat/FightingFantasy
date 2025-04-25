@@ -30,12 +30,22 @@ string SaveModel::getCenaAtual()
     return cena_atual;
 }
 
+void SaveModel::addCenaPassada(string cena)
+{
+    this->cenas_passadas.push_back(cena);
+}
+
+void SaveModel::setCenaAtual(string cena)
+{
+    this->cena_atual = cena;
+}
+
 void SaveModel::serializar(string filename)
 {
     ofstream arq;
     arq.open(filename);
     arq << "[PERSONAGEM]" << endl << this->personagem<< endl;
-    arq << "[CENAS_PASSADAS]";
+    arq << "[CENAS_PASSADAS]" << endl;
     for(string cena : this->cenas_passadas)
     {
         arq << cena << endl;
