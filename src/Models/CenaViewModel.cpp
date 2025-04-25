@@ -1,5 +1,6 @@
 #include "CenaViewModel.h"
 #include "CenaModel.h"
+#include "../../include/Interfaces/ISerializavel.h"
 #include <string>
 #include <fstream>
 #include <memory>
@@ -7,6 +8,21 @@
 
 using namespace std;
 CenaViewModel::CenaViewModel()
+{
+
+}
+
+CenaViewModel::~CenaViewModel()
+{
+    //dtor
+}
+
+void CenaViewModel::serializar(string filename)
+{
+
+}
+
+void CenaViewModel::desserializar(string filename)
 {
     ifstream arq;
     arq.open("./data/index/cenas.txt");
@@ -23,11 +39,6 @@ CenaViewModel::CenaViewModel()
         this->cenas[nome] = make_unique<CenaModel>();
         this->cenas[nome]->desserializar("./data/cenas/" + nome + ".txt");
     }
-}
-
-CenaViewModel::~CenaViewModel()
-{
-    //dtor
 }
 
 
@@ -58,8 +69,16 @@ void CenaViewModel::setCenaAtual(string cena)
     this->cena_atual = cena;
 }
 
-string CenaViewModel::getCenaAtual()
+string CenaViewModel::getNomeCenaAtual()
 {
     return cena_atual;
 }
 
+vector<string> getCenasEscolhasCenaAtual()
+{
+
+}
+vector<string> getDescricaoEscolhasCenaAtual()
+{
+
+}

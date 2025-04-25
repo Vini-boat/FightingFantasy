@@ -12,7 +12,7 @@ class CenaView : public BaseView
         void show() override;
         void handleInput() override;
     protected:
-
+        void resetOpcoes();
     private:
         CenaController* controller;
 };

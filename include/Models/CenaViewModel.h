@@ -4,20 +4,27 @@
 #include <BaseModel.h>
 #include "../../include/Models/CenaModel.h"
 
+#include "../../include/Interfaces/ISerializavel.h"
+
 #include <string>
 #include <map>
 #include <memory>
 #include <vector>
 
 using namespace std;
-class CenaViewModel : public BaseModel
+class CenaViewModel : public BaseModel, public ISerializavel
 {
     public:
         CenaViewModel();
         virtual ~CenaViewModel();
 
+        void serializar(string filename) override;
+        void desserializar(string filename) override;
+
         void setCenaAtual(string cena);
-        string getCenaAtual();
+        string getNomeCenaAtual();
+        vector<string> getCenasEscolhasCenaAtual();
+        vector<string> getDescricaoEscolhasCenaAtual();
 
         vector<string> getNomesCenas();
         vector<string> getTextoCenas();

@@ -14,6 +14,7 @@ class CenaController : public BaseController, public ICenaRouter
 
         virtual void changeCena(string cena) override;
         string getCenaText();
+        string getCenaName();
         //vector<string>
 
 

@@ -77,6 +77,7 @@ void Application::changeCurrentView(string view_name)
 void Application::debug()
 {
     CenaViewModel model;
+    model.desserializar("temp");
     vector<string> nomes = model.getTextoCenas();
     for(string nome : nomes)
     {

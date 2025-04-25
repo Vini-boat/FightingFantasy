@@ -17,3 +17,11 @@ void CenaController::changeCena(string cena)
     this->model->setCenaAtual(cena);
 }
 
+string CenaController::getCenaText()
+{
+    //return this->model->
+}
+string CenaController::getCenaName()
+{
+    return this->model->getNomeCenaAtual();
+}
