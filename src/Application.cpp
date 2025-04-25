@@ -17,6 +17,7 @@
 #include "../include/Commands/CarregarSave.h"
 
 #include "../include/Models/CenaViewModel.h"
+#include "../include/Models/SaveModel.h"
 
 #include <map>
 #include <memory>
@@ -78,12 +79,6 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    CenaViewModel model;
-    model.desserializar("temp");
-    vector<string> nomes = model.getTextoCenas();
-    for(string nome : nomes)
-    {
-        cout << nome << endl;
-    }
-
+    SaveModel game;
+    game.desserializar("./ex_savegame.txt");
 }

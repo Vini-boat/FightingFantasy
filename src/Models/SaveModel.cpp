@@ -22,10 +22,11 @@ SaveModel::~SaveModel()
 
 void SaveModel::serializar(string filename)
 {
+    this->personagem->serializar(this->personagem->getNome());
     ofstream arq;
     arq.open(filename);
     arq << "[PERSONAGEM]" << endl << this->personagem->getNome()<< endl;
-    arq << "[CENAS_PASSADAS]"
+    arq << "[CENAS_PASSADAS]";
     for(string cena : this->cenas_passadas)
     {
         arq << cena << endl;
@@ -59,6 +60,7 @@ void SaveModel::desserializar(string filename)
 
         if(prop == "personagem")
         {
+            this->personagem = new PersonagemModel;
             this->personagem->desserializar("./data/personagens/" + line + ".txt");
         }
         if(prop == "cenas_passadas")

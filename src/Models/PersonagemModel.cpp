@@ -64,6 +64,7 @@ void PersonagemModel::serializar(string filename)
 
 void PersonagemModel::desserializar(string filename)
 {
+
     ifstream arquivo;
     arquivo.open(filename);
     arquivo >> this->nome;
