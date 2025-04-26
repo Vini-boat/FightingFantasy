@@ -53,12 +53,14 @@
 		<Unit filename="include/Commands/CarregarSaveEMudarView.h" />
 		<Unit filename="include/Commands/ChangeCena.h" />
 		<Unit filename="include/Commands/ChangeView.h" />
+		<Unit filename="include/Commands/HelloCommand.h" />
 		<Unit filename="include/Commands/MultiCommand.h" />
 		<Unit filename="include/Commands/Sair.h" />
 		<Unit filename="include/Commands/SalvarCommand.h" />
 		<Unit filename="include/Commands/SalvarEMudarView.h" />
 		<Unit filename="include/Controllers/BaseController.h" />
 		<Unit filename="include/Controllers/CenaController.h" />
+		<Unit filename="include/Controllers/InventarioController.h" />
 		<Unit filename="include/Controllers/NewGameController.h" />
 		<Unit filename="include/Controllers/SaveController.h" />
 		<Unit filename="include/Interfaces/ICenaRouter.h" />
@@ -77,6 +79,7 @@
 		<Unit filename="include/Views/BaseView.h" />
 		<Unit filename="include/Views/CenaView.h" />
 		<Unit filename="include/Views/CreditosView.h" />
+		<Unit filename="include/Views/InventarioView.h" />
 		<Unit filename="include/Views/MenuView.h" />
 		<Unit filename="include/Views/NewGameView.h" />
 		<Unit filename="include/Views/SavedGamesView.h" />
@@ -86,12 +89,14 @@
 		<Unit filename="src/Commands/CarregarSaveEMudarView.cpp" />
 		<Unit filename="src/Commands/ChangeCena.cpp" />
 		<Unit filename="src/Commands/ChangeView.cpp" />
+		<Unit filename="src/Commands/HelloCommand.cpp" />
 		<Unit filename="src/Commands/MultiCommand.cpp" />
 		<Unit filename="src/Commands/Sair.cpp" />
 		<Unit filename="src/Commands/SalvarCommand.cpp" />
 		<Unit filename="src/Commands/SalvarEMudarView.cpp" />
 		<Unit filename="src/Controllers/BaseController.cpp" />
 		<Unit filename="src/Controllers/CenaController.cpp" />
+		<Unit filename="src/Controllers/InventarioController.cpp" />
 		<Unit filename="src/Controllers/NewGameController.cpp" />
 		<Unit filename="src/Controllers/SaveController.cpp" />
 		<Unit filename="src/Models/BaseModel.cpp" />
@@ -104,6 +109,7 @@
 		<Unit filename="src/Views/BaseView.cpp" />
 		<Unit filename="src/Views/CenaView.cpp" />
 		<Unit filename="src/Views/CreditosView.cpp" />
+		<Unit filename="src/Views/InventarioView.cpp" />
 		<Unit filename="src/Views/MenuView.cpp" />
 		<Unit filename="src/Views/NewGameView.cpp" />
 		<Unit filename="src/Views/SavedGamesView.cpp" />
