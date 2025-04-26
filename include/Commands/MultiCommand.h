@@ -2,17 +2,18 @@
 #define MULTICOMMAND_H
 
 #include <ICommand.h>
+#include <memory>
 
-
+using namespace std;
 class MultiCommand : public ICommand
 {
     public:
-        MultiCommand(ICommand* first, ICommand* seccond);
+        MultiCommand(shared_ptr<ICommand> first, shared_ptr<ICommand> second);
         virtual ~MultiCommand();
         void execute() override;
     private:
-        ICommand* first;
-        ICommand* seccond;
+        shared_ptr<ICommand> first;
+        shared_ptr<ICommand> second;
 };
 
 #endif // MULTICOMMAND_H

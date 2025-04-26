@@ -16,6 +16,8 @@
 #include "../include/Commands/SalvarEMudarView.h"
 #include "../include/Commands/CarregarSaveEMudarView.h"
 #include "../include/Commands/CarregarSave.h"
+#include "../include/Commands/MultiCommand.h"
+#include "../include/Commands/HelloCommand.h"
 
 #include "../include/Views/InventarioView.h"
 #include "../include/Controllers/InventarioController.h"
@@ -51,7 +53,11 @@ Application::Application()
     NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
     this->views["newgame"] = make_unique<NewGameView>(new_game_controller, new_game_view_model);
 
-    this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"savedgames"));
+    //this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"cenas"));
+    this->views["newgame"]->addOption("s", new MultiCommand(
+                                                            make_shared<SalvarCommand>(new_game_controller),
+                                                            make_shared<ChangeView>(this,"savedgames")
+                                                            ));
     this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["credits"] = make_unique<CreditosView>();
@@ -59,13 +65,18 @@ Application::Application()
 
     CenaViewModel* cena_view_model = new CenaViewModel;
     cena_view_model->carregarCenas();
+
     CenaController* cena_controller = new CenaController(cena_view_model,save);
     this->views["cenas"] = make_unique<CenaView>(cena_controller);
     this->views["cenas"]->addOption("i", new ChangeView(this, "inventario"));
     this->views["cenas"]->addOption("m", new ChangeView(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
-    this->views["savedgames"]->addOption("c", new CarregarSaveEMudarView(cena_controller, save,personagem_atual,"ex_savegame",this,"cenas"));
+    //this->views["savedgames"]->addOption("c", new CarregarSaveEMudarView(cena_controller, save,personagem_atual,"ex_savegame",this,"cenas"));
+    this->views["savedgames"]->addOption("c", new MultiCommand(
+                                                               make_shared<CarregarSave>(cena_controller,save,personagem_atual,"ex_savegame"),
+                                                               make_shared<ChangeView>(this,"cenas")
+                                                               ));
     this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
 
     this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual);
@@ -98,8 +109,8 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    save = new SaveModel;
-    personagem_atual = new PersonagemModel;
-    //ICommand* carregar = new CarregarSave(save,personagem_atual,"ex_savegame");
-    //carregar->execute();
+    shared_ptr<HelloCommand> oi = make_shared<HelloCommand>("oi");
+    shared_ptr<HelloCommand> tchau = make_shared<HelloCommand>("tchau");
+    shared_ptr<MultiCommand> m = make_shared<MultiCommand>(oi,tchau);
+    m->execute();
 }

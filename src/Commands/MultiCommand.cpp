@@ -2,11 +2,13 @@
 #include "../../include/Interfaces/ICommand.h"
 
 #include <iostream>
+#include <memory>
 
-MultiCommand::MultiCommand(ICommand* fisrt, ICommand* seccond)
+using namespace std;
+MultiCommand::MultiCommand(shared_ptr<ICommand> first, shared_ptr<ICommand> second)
 {
     this->first = first;
-    this->seccond = seccond;
+    this->second = second;
 }
 
 MultiCommand::~MultiCommand()
@@ -16,9 +18,6 @@ MultiCommand::~MultiCommand()
 
 void MultiCommand::execute()
 {
-    std::cout << "MULTI" << std::endl;
-    std::cout << this->first << std::endl;
-    if (this->first) this->first->execute();
-    std::cout << this->seccond << std::endl;
-    if (this->seccond) this->seccond->execute();
+    this->first->execute();
+    this->second->execute();
 }

@@ -11,5 +11,5 @@ nome personagem
 [PROVISOES]
 4
 [EQUIPAMENTOS]
-[]0
-[X]1
+O:0
+X:1
