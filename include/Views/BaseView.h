@@ -6,6 +6,7 @@
 #include <string>
 
 #include "../Interfaces/ICommand.h"
+#include "../../include/Models/ViewOption.h"
 
 using namespace std;
 class BaseView
@@ -16,17 +17,17 @@ class BaseView
         virtual void show() = 0;
         virtual void handleInput() = 0;
         void limparTela();
-        void addOption(string shortcut, ICommand* command);
+        void addStaticOption(string shortcut, string description, shared_ptr<ICommand> command);
         void printOptions();
         void showCursor();
         string getValidOption();
         void executeOption(string shortcut);
 
     protected:
-        map<string,ICommand*> options;
-        map<string,ICommand*> variable_options;
+        map<string,unique_ptr<ViewOption>> static_options;
+        map<string,unique_ptr<ViewOption>> variable_options;
 
-        void addVariableOption(string shortcut, ICommand* command);
+        void addVariableOption(string shortcut,string description, shared_ptr<ICommand> command);
         void resetVariableOptions();
 
     private:

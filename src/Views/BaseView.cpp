@@ -1,4 +1,5 @@
 #include "../../include/Views/BaseView.h"
+#include "../../include/Models/ViewOption.h"
 
 #include <map>
 #include <memory>
@@ -24,26 +25,27 @@ void BaseView::limparTela()
     system("cls");
 }
 
-void BaseView::addOption(string shortcut,ICommand* command)
+void BaseView::addStaticOption(string shortcut,string description, shared_ptr<ICommand> command)
 {
-    this->options[shortcut] = command;
+    this->static_options[shortcut] = make_unique<ViewOption>(description,command);
 }
 
 void BaseView::printOptions()
 {
-    for(auto& o: this->options)
-    {
-        cout << o.first << endl;
-    }
     for(auto& o: this->variable_options)
     {
-        cout << o.first << endl;
+        cout << "   " << o.first << ": " << o.second->getDescription() << endl;
+    }
+    cout << endl;
+    for(auto& o: this->static_options)
+    {
+        cout << "   " << o.first << ": " << o.second->getDescription() << endl;
     }
 }
 
 void BaseView::executeOption(string shortcut)
 {
-    for(auto& o: this->options)
+    for(auto& o: this->static_options)
     {
         if(shortcut == o.first)
         {
@@ -73,7 +75,7 @@ string BaseView::getValidOption()
         string option;
         cout << "> ";
         cin >> option;
-        for(auto& o: this->options)
+        for(auto& o: this->static_options)
         {
             if(option == o.first)
             {
@@ -91,9 +93,9 @@ string BaseView::getValidOption()
     }
 }
 
-void BaseView::addVariableOption(string shortcut, ICommand* command)
+void BaseView::addVariableOption(string shortcut,string description, shared_ptr<ICommand> command)
 {
-        this->variable_options[shortcut] = command;
+        this->variable_options[shortcut] = make_unique<ViewOption>(description, command);
 }
 void BaseView::resetVariableOptions()
 {

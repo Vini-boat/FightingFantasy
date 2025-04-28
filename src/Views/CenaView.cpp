@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 
 using namespace std;
 CenaView::CenaView(CenaController* controller)
@@ -49,9 +50,10 @@ void CenaView::resetOpcoes()
 {
     resetVariableOptions();
     int i = 0;
+    vector<string> descricoes = this->controller->getDescricaoEscolhasCena();
     for(string e: this->controller->getEscolhasCena())
     {
-        addVariableOption(to_string(i), new ChangeCena(this->controller,e));
+        addVariableOption(to_string(i), descricoes.at(i), make_shared<ChangeCena>(this->controller,e));
         i++;
     }
 }

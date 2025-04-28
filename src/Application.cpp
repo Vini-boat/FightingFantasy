@@ -13,8 +13,6 @@
 #include "../include/Commands/Sair.h"
 #include "../include/Commands/ChangeView.h"
 #include "../include/Commands/SalvarCommand.h"
-#include "../include/Commands/SalvarEMudarView.h"
-#include "../include/Commands/CarregarSaveEMudarView.h"
 #include "../include/Commands/CarregarSave.h"
 #include "../include/Commands/MultiCommand.h"
 #include "../include/Commands/HelloCommand.h"
@@ -44,43 +42,43 @@ Application::Application()
     this->personagem_atual = new PersonagemModel;
 
     this->views["menu"] = make_unique<MenuView>();
-    this->views["menu"]->addOption("n", new ChangeView(this, "newgame"));
-    this->views["menu"]->addOption("s", new ChangeView(this, "savedgames"));
-    this->views["menu"]->addOption("c", new ChangeView(this, "credits"));
-    this->views["menu"]->addOption("q", new Sair(this));
+    this->views["menu"]->addStaticOption("n","Novo jogo", make_shared<ChangeView>(this, "newgame"));
+    this->views["menu"]->addStaticOption("s","Carregar Jogo",make_shared<ChangeView>(this, "savedgames"));
+    this->views["menu"]->addStaticOption("c","Creditos",make_shared<ChangeView>(this, "credits"));
+    this->views["menu"]->addStaticOption("q","Sair",make_shared<Sair>(this));
 
     NewGameViewModel* new_game_view_model = new NewGameViewModel;
     NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
     this->views["newgame"] = make_unique<NewGameView>(new_game_controller, new_game_view_model);
 
-    //this->views["newgame"]->addOption("s",new SalvarEMudarView(new_game_controller,this,"cenas"));
-    this->views["newgame"]->addOption("s", new MultiCommand(
+    this->views["newgame"]->addStaticOption("s","Confirmar Personagem", make_shared<MultiCommand>(
                                                             make_shared<SalvarCommand>(new_game_controller),
                                                             make_shared<ChangeView>(this,"savedgames")
-                                                            ));
-    this->views["newgame"]->addOption("v", new ChangeView(this, "menu"));
+                                                            )
+                                      );
+    this->views["newgame"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "menu"));
 
     this->views["credits"] = make_unique<CreditosView>();
-    this->views["credits"]->addOption("v", new ChangeView(this, "menu"));
+    this->views["credits"]->addStaticOption("v","Voltar",make_shared<ChangeView>(this, "menu"));
 
     CenaViewModel* cena_view_model = new CenaViewModel;
     cena_view_model->carregarCenas();
 
     CenaController* cena_controller = new CenaController(cena_view_model,save);
     this->views["cenas"] = make_unique<CenaView>(cena_controller);
-    this->views["cenas"]->addOption("i", new ChangeView(this, "inventario"));
-    this->views["cenas"]->addOption("m", new ChangeView(this, "menu"));
+    this->views["cenas"]->addStaticOption("i","Inventario",make_shared<ChangeView>(this, "inventario"));
+    this->views["cenas"]->addStaticOption("m","Voltar para o Menu", make_shared<ChangeView>(this, "menu"));
 
     this->views["savedgames"] = make_unique<SavedGamesView>(saved_games_model);
-    //this->views["savedgames"]->addOption("c", new CarregarSaveEMudarView(cena_controller, save,personagem_atual,"ex_savegame",this,"cenas"));
-    this->views["savedgames"]->addOption("c", new MultiCommand(
+    this->views["savedgames"]->addStaticOption("c","Carregar Jogo", make_shared<MultiCommand>(
                                                                make_shared<CarregarSave>(cena_controller,save,personagem_atual,"ex_savegame"),
                                                                make_shared<ChangeView>(this,"cenas")
-                                                               ));
-    this->views["savedgames"]->addOption("v", new ChangeView(this, "menu"));
+                                                               )
+                                         );
+    this->views["savedgames"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "menu"));
 
     this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual);
-    this->views["inventario"]->addOption("v", new ChangeView(this, "cenas"));
+    this->views["inventario"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "cenas"));
 
 
 }
