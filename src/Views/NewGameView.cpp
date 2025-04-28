@@ -42,9 +42,7 @@ void NewGameView::show()
         cout << "   Habilidade: " << this->model->getHabilidade() << endl;
         cout << "   Energia:    " << this->model->getEnergia() << endl;
         cout << "   Sorte:      " << this->model->getSorte() << endl;
-        cout << endl;
-        cout << "   s: Confirmar personagem" << endl;
-        cout << "   v: voltar" << endl;
+        printOptions();
         cout << endl;
         cout << "--------------------------------" << endl;
         break;

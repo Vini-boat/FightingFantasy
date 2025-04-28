@@ -26,16 +26,17 @@ void CenaView::show()
     cout << endl;
     cout << this->controller->getCenaText() << endl;
     cout << endl;
-    int i =0;
-    for(string e: this->controller->getDescricaoEscolhasCena())
-    {
-        cout << "   " << i << ": " <<  e << endl;
-        i++;
-    }
-    cout << endl;
-    cout << "   i: Inventario" << endl;
-    cout << "   m: Voltar para o Menu" << endl;
-    cout << endl;
+    //int i =0;
+    //for(string e: this->controller->getDescricaoEscolhasCena())
+    //{
+    //    cout << "   " << i << ": " <<  e << endl;
+    //    i++;
+    //}
+    //cout << endl;
+    //cout << "   i: Inventario" << endl;
+    //cout << "   m: Voltar para o Menu" << endl;
+    //cout << endl;
+    printOptions();
     cout << "--------------------------------" << endl;
 }
 

@@ -1,5 +1,5 @@
 [PERSONAGEM]
-teste
+Bea
 [CENAS_PASSADAS]
 1
 [CENA_ATUAL]

@@ -45,7 +45,7 @@ Application::Application()
     this->views["menu"]->addStaticOption("n","Novo jogo", make_shared<ChangeView>(this, "newgame"));
     this->views["menu"]->addStaticOption("s","Carregar Jogo",make_shared<ChangeView>(this, "savedgames"));
     this->views["menu"]->addStaticOption("c","Creditos",make_shared<ChangeView>(this, "credits"));
-    this->views["menu"]->addStaticOption("q","Sair",make_shared<Sair>(this));
+    this->views["menu"]->addStaticOption("z","Sair",make_shared<Sair>(this));
 
     NewGameViewModel* new_game_view_model = new NewGameViewModel;
     NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
@@ -107,8 +107,5 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    shared_ptr<HelloCommand> oi = make_shared<HelloCommand>("oi");
-    shared_ptr<HelloCommand> tchau = make_shared<HelloCommand>("tchau");
-    shared_ptr<MultiCommand> m = make_shared<MultiCommand>(oi,tchau);
-    m->execute();
+
 }
