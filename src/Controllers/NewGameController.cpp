@@ -41,13 +41,19 @@ void NewGameController::salvar()
 
 bool NewGameController::validarHabilidade(int habilidade)
 {
+    if(habilidade < 6) return false;
+    if(habilidade > 12) return false;
     return true;
 }
 bool NewGameController::validarEnergia(int energia)
 {
+    if(energia < 12) return false;
+    if(energia > 24) return false;
     return true;
 }
 bool NewGameController::validarSorte(int sorte)
 {
+    if(sorte < 6) return false;
+    if(sorte > 12) return false;
     return true;
 }
