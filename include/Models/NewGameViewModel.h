@@ -25,8 +25,12 @@ class NewGameViewModel : public BaseModel
 
         void setSorte(int sorte);
         int getSorte();
+
+        void reset();
     private:
         int etapa_atual;
+        int pontos_restantes;
+
         string nome;
         int habilidade;
         int energia;

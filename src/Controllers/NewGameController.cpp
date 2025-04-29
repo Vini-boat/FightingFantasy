@@ -25,7 +25,7 @@ void NewGameController::createNewPersonagem()
     this->model->setEnergia(this->view_model->getEnergia());
     this->model->setSorte(this->view_model->getSorte());
     //this->salvarPersonagem();
-    this->view_model->setEtapa(0);
+    this->view_model->reset();
 }
 
 void NewGameController::salvar()

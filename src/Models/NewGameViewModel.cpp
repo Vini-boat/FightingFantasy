@@ -54,3 +54,12 @@ int NewGameViewModel::getSorte()
 {
     return sorte;
 }
+
+void NewGameViewModel::reset()
+{
+    this->etapa_atual =0;
+    this->nome = "";
+    this->habilidade = 0;
+    this->energia = 0;
+    this->sorte = 0;
+}
