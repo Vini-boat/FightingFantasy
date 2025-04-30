@@ -22,6 +22,8 @@ void NewGameView::show()
     limparTela();
     cout << "========== NEW GAME ==========" << endl;
     cout << endl;
+    cout << "   Pontos restantes: " << this->model->getPontosRestantes() << endl;
+    cout << endl;
     switch(this->model->getEtapa())
     {
     case 0:
