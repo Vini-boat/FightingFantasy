@@ -24,6 +24,7 @@
 
 #include "../include/Models/CenaViewModel.h"
 #include "../include/Models/SaveModel.h"
+#include "../include/Models/MonstroModel.h"
 
 #include <map>
 #include <memory>
@@ -107,5 +108,7 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
+    MonstroModel monstro;
+    monstro.desserializar("ex_monstro.txt");
 
 }
