@@ -70,6 +70,8 @@
 		<Unit filename="include/Models/BaseModel.h" />
 		<Unit filename="include/Models/CenaModel.h" />
 		<Unit filename="include/Models/CenaViewModel.h" />
+		<Unit filename="include/Models/ItemModel.h" />
+		<Unit filename="include/Models/MonstroModel.h" />
 		<Unit filename="include/Models/NewGameViewModel.h" />
 		<Unit filename="include/Models/PersonagemModel.h" />
 		<Unit filename="include/Models/SaveModel.h" />
@@ -99,6 +101,8 @@
 		<Unit filename="src/Models/BaseModel.cpp" />
 		<Unit filename="src/Models/CenaModel.cpp" />
 		<Unit filename="src/Models/CenaViewModel.cpp" />
+		<Unit filename="src/Models/ItemModel.cpp" />
+		<Unit filename="src/Models/MonstroModel.cpp" />
 		<Unit filename="src/Models/NewGameViewModel.cpp" />
 		<Unit filename="src/Models/PersonagemModel.cpp" />
 		<Unit filename="src/Models/SaveModel.cpp" />
