@@ -24,7 +24,9 @@ class NewGameController : public BaseController, public ISalvavel
         bool validarEnergia(int energia);
         bool validarSorte(int sorte);
 
-
+        void setHabilidade(int habilidade);
+        void setEnergia(int energia);
+        void setSorte(int sorte);
 
     protected:
 

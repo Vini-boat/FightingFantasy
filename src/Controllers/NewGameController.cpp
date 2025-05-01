@@ -57,3 +57,18 @@ bool NewGameController::validarSorte(int sorte)
     if(sorte > 12) return false;
     return true;
 }
+
+void NewGameController::setHabilidade(int habilidade)
+{
+    this->view_model->setHabilidade(habilidade);
+}
+
+void NewGameController::setEnergia(int energia)
+{
+    this->view_model->setEnergia(energia);
+}
+
+void NewGameController::setSorte(int sorte)
+{
+    this->view_model->setSorte(sorte);
+}
