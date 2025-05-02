@@ -2,14 +2,21 @@
 #include "../../include/Controllers/MonstroController.h"
 #include "../../include/Interfaces/ISetMonstro.h"
 #include "../../include/Models/PersonagemModel.h"
+#include "../../include/Commands/MultiCommand.h"
+#include "../../include/Commands/ChangeCena.h"
+#include "../../include/Commands/ChangeView.h"
+#include "../../include/Commands/MultiCommand.h"
+#include "../../include/Controllers/CenaController.h"
 #include <memory>
 #include <random>
 
 using namespace std;
-CombateController::CombateController(shared_ptr<MonstroController> monstro_controller, PersonagemModel* player)
+CombateController::CombateController(shared_ptr<MonstroController> monstro_controller, PersonagemModel* player, shared_ptr<ChangeView> change_to_cenas_view, CenaController* cena_controller)
 {
     this->monstro_controller = monstro_controller;
     this->player = player;
+    this->change_to_cenas_view = change_to_cenas_view;
+    this->cena_controller = cena_controller;
 }
 
 CombateController::~CombateController(){}
@@ -71,4 +78,16 @@ void CombateController::ataque()
     int fa_player =  getRandomInt(1,10) + this->player->getHabilidade();
     if(fa_monstro > fa_player) this->player->setEnergia(this->player->getEnergia() - dano);
     if(fa_player > fa_monstro) this->setEnergiaAtual(this->energia_atual - dano);
+    if(this->energia_atual <= 0)
+    {
+        this->change_to_cenas_view->execute();
+        auto cmd = make_shared<ChangeCena>(this->cena_controller,to_string(this->monstro_controller->getCenaVitoria(this->monstro_atual)));
+        cmd->execute();
+    }
+    if(this->player->getEnergia() <= 0)
+    {
+        this->change_to_cenas_view->execute();
+        auto cmd = make_shared<ChangeCena>(this->cena_controller,to_string(this->monstro_controller->getCenaDerrota(this->monstro_atual)));
+        cmd->execute();
+    }
 }

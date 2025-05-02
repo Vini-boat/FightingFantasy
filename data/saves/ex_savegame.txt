@@ -1,8 +1,9 @@
 [PERSONAGEM]
-combate
+t
 [CENAS_PASSADAS]
 1
 1
 2
+3
 [CENA_ATUAL]
-2
+3

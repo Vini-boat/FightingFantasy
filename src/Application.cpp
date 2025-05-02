@@ -62,10 +62,10 @@ Application::Application()
 
     shared_ptr<MonstroController> monstro_controller = make_shared<MonstroController>();
     monstro_controller->carregarMonstros();
-
-    shared_ptr<CombateController> combate_controller = make_shared<CombateController>(monstro_controller,this->personagem_atual);
-
     CenaController* cena_controller = new CenaController(cena_view_model,save,this->personagem_atual);
+    shared_ptr<CombateController> combate_controller = make_shared<CombateController>(monstro_controller,this->personagem_atual,make_shared<ChangeView>(this,"cenas"),cena_controller);
+
+
     this->views["menu"] = make_unique<MenuView>();
     this->views["menu"]->addStaticOption("n","Novo jogo", make_shared<ChangeView>(this, "newgame"));
     this->views["menu"]->addStaticOption("s","Carregar Jogo",make_shared<ChangeView>(this, "savedgames"));
