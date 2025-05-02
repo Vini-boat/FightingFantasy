@@ -41,6 +41,16 @@ vector<string> CenaModel::getDescricaoEscolhas()
     return resultado;
 }
 
+int CenaModel::getTesouro()
+{
+    return this->tesouro;
+}
+
+int CenaModel::getProvisoes()
+{
+    return this->provisoes;
+}
+
 void CenaModel::serializar(string filename)
 {
 
@@ -51,6 +61,7 @@ void CenaModel::desserializar(string filename)
     this->escolhas.clear();
     this->itens.clear();
     this->tesouro = 0;
+    this->provisoes = 0;
     ifstream arq;
     arq.open(filename);
     string line;
@@ -61,10 +72,12 @@ void CenaModel::desserializar(string filename)
         if(line == "[ESCOLHAS]"){atributo = "[ESCOLHAS]";continue;};
         if(line == "[ITENS]"){atributo = "[ITENS]";continue;};
         if(line == "[TESOURO]"){atributo = "[TESOURO]";continue;};
+        if(line == "[PROVISOES]"){atributo = "[PROVISOES]";continue;};
         if(line == "[FINAL]") break;
-        sstream ss(line);
+        stringstream ss(line);
         if(atributo == "[TEXTO]") this->text += line += '\n';
-        if(atributo == "[TESOURO]"){int i; ss >> i; this->tesouro = i;};
+        if(atributo == "[TESOURO]") ss >> this->tesouro;
+        if(atributo == "[PROVISOES]") ss >> this->provisoes;
         if(atributo == "[ESCOLHAS]")
         {
             size_t pos_separator = line.find(':');

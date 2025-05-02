@@ -21,6 +21,8 @@ class CenaModel : public BaseModel, public ISerializavel
         vector<string> getCenasEscolhas();
         vector<string> getDescricaoEscolhas();
         vector<string> getItens();
+        int getTesouro();
+        int getProvisoes();
 
     protected:
 
@@ -28,6 +30,7 @@ class CenaModel : public BaseModel, public ISerializavel
         string text;
         vector<pair<string,string>> escolhas;
         int tesouro;
+        int provisoes;
         vector<string> itens;
 };
 

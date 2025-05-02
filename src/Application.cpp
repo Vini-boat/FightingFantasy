@@ -17,6 +17,7 @@
 #include "../include/Commands/MultiCommand.h"
 #include "../include/Commands/HelloCommand.h"
 #include "../include/Commands/ResetCommand.h"
+#include "../include/Commands/CurarCommand.h"
 
 #include "../include/Views/InventarioView.h"
 #include "../include/Controllers/InventarioController.h"
@@ -95,6 +96,7 @@ Application::Application()
 
     this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual, item_controller);
     this->views["inventario"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "cenas"));
+    this->views["inventario"]->addStaticOption("c","Usar provisão (cura 2 de energia)", make_shared<CurarCommand>(this->personagem_atual));
 
 
 }

@@ -52,6 +52,7 @@
 		<Unit filename="include/Commands/CarregarSave.h" />
 		<Unit filename="include/Commands/ChangeCena.h" />
 		<Unit filename="include/Commands/ChangeView.h" />
+		<Unit filename="include/Commands/CurarCommand.h" />
 		<Unit filename="include/Commands/HelloCommand.h" />
 		<Unit filename="include/Commands/MultiCommand.h" />
 		<Unit filename="include/Commands/ResetCommand.h" />
@@ -65,6 +66,7 @@
 		<Unit filename="include/Controllers/SaveController.h" />
 		<Unit filename="include/Interfaces/ICenaRouter.h" />
 		<Unit filename="include/Interfaces/ICommand.h" />
+		<Unit filename="include/Interfaces/ICuravel.h" />
 		<Unit filename="include/Interfaces/IResetable.h" />
 		<Unit filename="include/Interfaces/IRunner.h" />
 		<Unit filename="include/Interfaces/ISalvavel.h" />
@@ -92,6 +94,7 @@
 		<Unit filename="src/Commands/CarregarSave.cpp" />
 		<Unit filename="src/Commands/ChangeCena.cpp" />
 		<Unit filename="src/Commands/ChangeView.cpp" />
+		<Unit filename="src/Commands/CurarCommand.cpp" />
 		<Unit filename="src/Commands/HelloCommand.cpp" />
 		<Unit filename="src/Commands/MultiCommand.cpp" />
 		<Unit filename="src/Commands/ResetCommand.cpp" />

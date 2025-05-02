@@ -6,9 +6,10 @@
 
 #include "../Models/BaseModel.h"
 #include "../Interfaces/ISerializavel.h"
+#include "../Interfaces/ICuravel.h"
 
 using namespace std;
-class PersonagemModel : public BaseModel, public ISerializavel
+class PersonagemModel : public BaseModel, public ISerializavel, public ICuravel
 {
     public:
         PersonagemModel();
@@ -16,6 +17,7 @@ class PersonagemModel : public BaseModel, public ISerializavel
         void serializar(string filename) override;
         void desserializar(string filename) override;
         void salvar();
+        void curar() override;
 
         void setNome(string nome);
         string getNome();

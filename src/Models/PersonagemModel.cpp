@@ -91,6 +91,16 @@ int PersonagemModel::getTesouro()
     return this->tesouro;
 }
 
+void PersonagemModel::curar()
+{
+    if(this->energia == this->energia_maxima) return;
+    if(this->provisoes <= 0) return;
+
+    if(this->energia + 2 > energia_maxima) this->energia = this->energia_maxima;
+    if(this->energia + 2 <= energia_maxima) this->energia += 2;
+    this->provisoes -=1;
+}
+
 void PersonagemModel::serializar(string filename)
 {
     ofstream arq;

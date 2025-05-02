@@ -42,9 +42,7 @@ void InventarioView::show()
         cout << "   " << i << ": " << item << " | " << this->item_controller->getItemDescription(item) << endl;
         i++;
     }
-    cout << endl;
-    cout << "   v: Voltar para a cena" << endl;
-    cout << endl;
+    printOptions();
     cout << "--------------------------------" << endl;
 }
 void InventarioView::handleInput()
