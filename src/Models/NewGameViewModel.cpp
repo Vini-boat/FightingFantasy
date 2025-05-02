@@ -2,7 +2,7 @@
 
 NewGameViewModel::NewGameViewModel()
 {
-    this->etapa_atual = 0;
+    this->reset();
 }
 
 NewGameViewModel::~NewGameViewModel()
@@ -58,8 +58,14 @@ int NewGameViewModel::getSorte()
 void NewGameViewModel::reset()
 {
     this->etapa_atual =0;
+    this->pontos_restantes = 12;
     this->nome = "";
     this->habilidade = 0;
     this->energia = 0;
     this->sorte = 0;
+}
+
+int NewGameViewModel::getPontosRestantes()
+{
+    return this->pontos_restantes;
 }

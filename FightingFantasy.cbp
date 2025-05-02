@@ -83,7 +83,7 @@
 		<Unit filename="include/Views/InventarioView.h" />
 		<Unit filename="include/Views/MenuView.h" />
 		<Unit filename="include/Views/NewGameView.h" />
-		<Unit filename="include/Views/SavedGamesView.h" />
+		<Unit filename="include/Views/SavedGamesView.h" />s
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Application.cpp" />
 		<Unit filename="src/Commands/CarregarSave.cpp" />

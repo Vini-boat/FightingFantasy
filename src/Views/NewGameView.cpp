@@ -22,6 +22,8 @@ void NewGameView::show()
     limparTela();
     cout << "========== NEW GAME ==========" << endl;
     cout << endl;
+    cout << "   Pontos restantes: " << this->model->getPontosRestantes() << endl;
+    cout << endl;
     switch(this->model->getEtapa())
     {
     case 0:
@@ -59,7 +61,7 @@ void NewGameView::handleInput()
             cin >> h;
             if(this->controller->validarHabilidade(h))
             {
-                this->model->setHabilidade(h);
+                this->controller->setHabilidade(h);
                 this->model->setEtapa(1);
             }
             break;
@@ -70,7 +72,7 @@ void NewGameView::handleInput()
             cin >> e;
             if(this->controller->validarEnergia(e))
             {
-                this->model->setEnergia(e);
+                this->controller->setEnergia(e);
                 this->model->setEtapa(2);
             }
             break;
@@ -81,7 +83,7 @@ void NewGameView::handleInput()
             cin >> s;
             if(this->controller->validarSorte(s))
             {
-                this->model->setSorte(s);
+                this->controller->setSorte(s);
                 this->model->setEtapa(3);
             }
             break;
