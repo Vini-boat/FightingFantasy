@@ -91,3 +91,8 @@ vector<string> CenaViewModel::getDescricaoEscolhasCenaAtual()
 {
     return this->cenas[this->cena_atual]->getDescricaoEscolhas();
 }
+
+vector<string> CenaViewModel::getItensCenaAtual()
+{
+    return this->cenas[this->cena_atual]->getItens();
+}

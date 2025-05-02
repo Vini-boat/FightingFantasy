@@ -51,7 +51,7 @@ Application::Application()
     CenaViewModel* cena_view_model = new CenaViewModel;
     cena_view_model->carregarCenas();
 
-    CenaController* cena_controller = new CenaController(cena_view_model,save);
+    CenaController* cena_controller = new CenaController(cena_view_model,save,this->personagem_atual);
     this->views["menu"] = make_unique<MenuView>();
     this->views["menu"]->addStaticOption("n","Novo jogo", make_shared<ChangeView>(this, "newgame"));
     this->views["menu"]->addStaticOption("s","Carregar Jogo",make_shared<ChangeView>(this, "savedgames"));
@@ -108,6 +108,7 @@ void Application::run()
 {
     while(running)
     {
+        this->views[current_view]->process();
         this->views[current_view]->show();
         this->views[current_view]->handleInput();
     }

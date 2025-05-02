@@ -20,6 +20,11 @@ BaseView::~BaseView()
     //dtor
 }
 
+void BaseView::process()
+{
+
+}
+
 void BaseView::limparTela()
 {
     system("cls");

@@ -11,6 +11,7 @@ class CenaView : public BaseView
         virtual ~CenaView();
         void show() override;
         void handleInput() override;
+        void process() override;
     protected:
         void resetOpcoes();
     private:

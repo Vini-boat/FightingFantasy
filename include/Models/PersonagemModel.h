@@ -15,6 +15,7 @@ class PersonagemModel : public BaseModel, public ISerializavel
         virtual ~PersonagemModel();
         void serializar(string filename) override;
         void desserializar(string filename) override;
+        void salvar();
 
         void setNome(string nome);
         string getNome();
@@ -27,6 +28,9 @@ class PersonagemModel : public BaseModel, public ISerializavel
 
         void setSorte(int sorte);
         int getSorte();
+
+        void addItem(string item);
+        vector<string> getItens();
 
     protected:
 

@@ -29,6 +29,14 @@ void InventarioView::show()
     cout << "   Energia:    " << this->model->getEnergia() << endl;
     cout << "   Sorte:      " << this->model->getSorte() << endl;
     cout << endl;
+    cout << "   Itens: " << endl;
+    int i=0;
+    for(string& item: this->model->getItens())
+    {
+        cout << "   " << i << ": " << item << endl;
+        i++;
+    }
+    cout << endl;
     cout << "   v: Voltar para a cena" << endl;
     cout << endl;
     cout << "--------------------------------" << endl;

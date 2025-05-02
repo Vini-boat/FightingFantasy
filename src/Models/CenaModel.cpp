@@ -54,25 +54,12 @@ void CenaModel::desserializar(string filename)
     string atributo;
     while(getline(arq,line))
     {
-        if(line == "[TEXTO]")
-        {
-            atributo = "texto";
-            continue;
-        }
-        if(line == "[ESCOLHAS]")
-        {
-            atributo = "escolhas";
-            continue;
-        }
-        if(line == "[FINAL]")
-        {
-            break;
-        }
+        if(line == "[TEXTO]"){atributo = "texto";continue;};
+        if(line == "[ESCOLHAS]"){atributo = "escolhas";continue;};
+        if(line == "[ITENS]"){atributo = "itens";continue;}
+        if(line == "[FINAL]") break;
 
-        if(atributo == "texto")
-        {
-            this->text += line += '\n';
-        }
+        if(atributo == "texto") this->text += line += '\n';
         if(atributo == "escolhas")
         {
             size_t pos_separator = line.find(':');
@@ -80,6 +67,15 @@ void CenaModel::desserializar(string filename)
             string desc = line.substr(pos_separator + 2) ;
             this->escolhas.push_back(pair<string,string>(cena,desc));
         }
+        if(atributo == "itens")
+        {
+            this->itens.push_back(line);
+        }
     }
     arq.close();
+}
+
+vector<string> CenaModel::getItens()
+{
+    return this->itens;
 }

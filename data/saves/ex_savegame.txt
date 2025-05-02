@@ -1,6 +1,12 @@
 [PERSONAGEM]
-getNome-5
+bug_fix2
 [CENAS_PASSADAS]
 1
-[CENA_ATUAL]
 1
+2
+5
+10
+13
+14
+[CENA_ATUAL]
+14

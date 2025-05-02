@@ -1,0 +1,16 @@
+[NOME]
+bug
+[HABILIDADE]
+12
+[ENERGIA]
+12
+[SORTE]
+12
+[TESOURO]
+0
+[PROVISOES]
+0
+[ITENS]
+chave
+chave
+[FINAL]

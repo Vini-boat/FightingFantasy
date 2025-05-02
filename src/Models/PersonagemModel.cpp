@@ -51,6 +51,16 @@ int PersonagemModel::getSorte()
     return sorte;
 }
 
+void PersonagemModel::addItem(string item)
+{
+    this->itens.push_back(item);
+}
+
+vector<string> PersonagemModel::getItens()
+{
+    return this->itens;
+}
+
 void PersonagemModel::serializar(string filename)
 {
     ofstream arq;
@@ -79,9 +89,15 @@ void PersonagemModel::serializar(string filename)
     index << this->nome << endl;
     index.close();
 }
+void PersonagemModel::salvar()
+{
+    this->serializar("./data/personagens/" + this->nome + ".txt");
+}
 
 void PersonagemModel::desserializar(string filename)
 {
+    this->itens.clear();
+
     ifstream arq;
     arq.open(filename);
     string prop;

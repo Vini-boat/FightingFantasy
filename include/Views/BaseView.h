@@ -16,6 +16,7 @@ class BaseView
         virtual ~BaseView();
         virtual void show() = 0;
         virtual void handleInput() = 0;
+        virtual void process();
         void limparTela();
         void addStaticOption(string shortcut, string description, shared_ptr<ICommand> command);
         void printOptions();

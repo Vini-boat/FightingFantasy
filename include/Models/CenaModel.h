@@ -20,12 +20,14 @@ class CenaModel : public BaseModel, public ISerializavel
         string getText();
         vector<string> getCenasEscolhas();
         vector<string> getDescricaoEscolhas();
+        vector<string> getItens();
 
     protected:
 
     private:
         string text;
         vector<pair<string,string>> escolhas;
+        vector<string> itens;
 };
 
 #endif // CENAMODEL_H

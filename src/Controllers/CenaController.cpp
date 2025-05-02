@@ -1,15 +1,17 @@
 #include "CenaController.h"
 #include "../../include/Models/CenaViewModel.h"
 #include "../../include/Models/SaveModel.h"
+#include "../../include/Models/PersonagemModel.h"
 
 #include <vector>
 #include <string>
 
 using namespace std;
-CenaController::CenaController(CenaViewModel* model, SaveModel* save)
+CenaController::CenaController(CenaViewModel* model, SaveModel* save, PersonagemModel* player)
 {
     this->model = model;
     this->save = save;
+    this->player = player;
 }
 
 CenaController::~CenaController()
@@ -23,6 +25,8 @@ void CenaController::changeCena(string cena)
     this->save->addCenaPassada(cena);
     this->save->setCenaAtual(cena);
     this->salvar();
+
+    this->addItensToPlayer();
 }
 
 void CenaController::salvar()
@@ -52,4 +56,13 @@ vector<string> CenaController::getEscolhasCena()
 vector<string> CenaController::getDescricaoEscolhasCena()
 {
     return this->model->getDescricaoEscolhasCenaAtual();
+}
+
+void CenaController::addItensToPlayer()
+{
+    for(string& i: this->model->getItensCenaAtual())
+    {
+        this->player->addItem(i);
+    }
+    this->player->salvar();
 }
