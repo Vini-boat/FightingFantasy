@@ -24,7 +24,10 @@ void NewGameController::createNewPersonagem()
     this->model->setNome(this->view_model->getNome2());
     this->model->setHabilidade(this->view_model->getHabilidade());
     this->model->setEnergia(this->view_model->getEnergia());
+    this->model->setEnergiaMaxima(this->view_model->getEnergia());
     this->model->setSorte(this->view_model->getSorte());
+    this->model->setTesouro(0);
+    this->model->setProvisoes(2);
     //this->salvarPersonagem();
 }
 

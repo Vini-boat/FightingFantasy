@@ -32,12 +32,22 @@ class PersonagemModel : public BaseModel, public ISerializavel
         void addItem(string item);
         vector<string> getItens();
 
+        void setProvisoes(int provisoes);
+        int getProvisoes();
+
+        void setEnergiaMaxima(int energia_maxima);
+        int getEnergiaMaxima();
+
+        void setTesouro(int tesouro);
+        int getTesouro();
+
     protected:
 
     private:
         string nome;
         int habilidade;
         int energia;
+        int energia_maxima;
         int sorte;
         int tesouro;
         int provisoes;

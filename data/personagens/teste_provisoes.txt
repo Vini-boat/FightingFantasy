@@ -1,0 +1,15 @@
+[NOME]
+teste_provisoes
+[HABILIDADE]
+12
+[ENERGIA]
+12
+[SORTE]
+12
+[TESOURO]
+0
+[PROVISOES]
+2
+[ITENS]
+chave
+[FINAL]

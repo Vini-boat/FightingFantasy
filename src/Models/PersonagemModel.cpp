@@ -61,6 +61,36 @@ vector<string> PersonagemModel::getItens()
     return this->itens;
 }
 
+void PersonagemModel::setProvisoes(int provisoes)
+{
+    this->provisoes = provisoes;
+}
+
+int PersonagemModel::getProvisoes()
+{
+    return this->provisoes;
+}
+
+void PersonagemModel::setEnergiaMaxima(int energia_maxima)
+{
+    this->energia_maxima = energia_maxima;
+}
+
+int PersonagemModel::getEnergiaMaxima()
+{
+    return this->energia_maxima;
+}
+
+void PersonagemModel::setTesouro(int tesouro)
+{
+    this->tesouro = tesouro;
+}
+
+int PersonagemModel::getTesouro()
+{
+    return this->tesouro;
+}
+
 void PersonagemModel::serializar(string filename)
 {
     ofstream arq;
@@ -71,6 +101,8 @@ void PersonagemModel::serializar(string filename)
     arq << this->habilidade << endl;
     arq << "[ENERGIA]" << endl;
     arq << this->energia << endl;
+    arq << "[ENERGIA_MAXIMA]" << endl;
+    arq << this->energia_maxima << endl;
     arq << "[SORTE]" << endl;
     arq << this->sorte << endl;
     arq << "[TESOURO]" << endl;
@@ -107,6 +139,7 @@ void PersonagemModel::desserializar(string filename)
         if(line == "[NOME]") {prop = "[NOME]"; continue;};
         if(line == "[HABILIDADE]") {prop = "[HABILIDADE]"; continue;};
         if(line == "[ENERGIA]") {prop = "[ENERGIA]"; continue;};
+        if(line == "[ENERGIA_MAXIMA]") {prop = "[ENERGIA_MAXIMA]"; continue;};
         if(line == "[SORTE]") {prop = "[SORTE]"; continue;};
         if(line == "[TESOURO]") {prop = "[TESOURO]"; continue;};
         if(line == "[PROVISOES]") {prop = "[PROVISOES]"; continue;};
@@ -116,6 +149,7 @@ void PersonagemModel::desserializar(string filename)
         if(prop == "[NOME]") this->nome = line;
         if(prop == "[HABILIDADE]") ss >> this->habilidade;
         if(prop == "[ENERGIA]") ss >> this->energia;
+        if(prop == "[ENERGIA_MAXIMA]") ss >> this->energia_maxima;
         if(prop == "[SORTE]") ss >> this->sorte;
         if(prop == "[TESOURO]") ss >> this->tesouro;
         if(prop == "[PROVISOES]") ss >> this->provisoes;

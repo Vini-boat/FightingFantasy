@@ -13,7 +13,7 @@ using namespace std;
 class InventarioView : public BaseView
 {
     public:
-        InventarioView(InventarioController* controller, PersonagemModel* model, shared_ptr<ItemController> item_controller);
+        InventarioView(InventarioController* controller, PersonagemModel* player, shared_ptr<ItemController> item_controller);
         virtual ~InventarioView();
 
         void show() override;
@@ -23,7 +23,7 @@ class InventarioView : public BaseView
 
     private:
         InventarioController* controller;
-        PersonagemModel* model;
+        PersonagemModel* player;
         shared_ptr<ItemController> item_controller;
 };
 

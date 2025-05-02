@@ -1,11 +1,6 @@
 [PERSONAGEM]
-teste_itens
+tesouro
 [CENAS_PASSADAS]
 1
-1
-2
-5
-10
-13
 [CENA_ATUAL]
-13
+1
