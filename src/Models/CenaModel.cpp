@@ -41,6 +41,26 @@ vector<string> CenaModel::getDescricaoEscolhas()
     return resultado;
 }
 
+vector<string> CenaModel::getMonstrosCombates()
+{
+    vector<string> resultado;
+    for (const auto& combate : this->combates)
+    {
+        resultado.push_back(combate.first);
+    }
+    return resultado;
+}
+
+vector<string> CenaModel::getDescricaoCombates()
+{
+    vector<string> resultado;
+    for (const auto& combate : this->combates)
+    {
+        resultado.push_back(combate.second);
+    }
+    return resultado;
+}
+
 int CenaModel::getTesouro()
 {
     return this->tesouro;
@@ -59,6 +79,7 @@ void CenaModel::serializar(string filename)
 void CenaModel::desserializar(string filename)
 {
     this->escolhas.clear();
+    this->combates.clear();
     this->itens.clear();
     this->tesouro = 0;
     this->provisoes = 0;
@@ -70,6 +91,7 @@ void CenaModel::desserializar(string filename)
     {
         if(line == "[TEXTO]"){atributo = "[TEXTO]";continue;};
         if(line == "[ESCOLHAS]"){atributo = "[ESCOLHAS]";continue;};
+        if(line == "[COMBATES]"){atributo = "[COMBATES]";continue;};
         if(line == "[ITENS]"){atributo = "[ITENS]";continue;};
         if(line == "[TESOURO]"){atributo = "[TESOURO]";continue;};
         if(line == "[PROVISOES]"){atributo = "[PROVISOES]";continue;};
@@ -84,6 +106,13 @@ void CenaModel::desserializar(string filename)
             string cena = line.substr(0,pos_separator);
             string desc = line.substr(pos_separator + 2) ;
             this->escolhas.push_back(pair<string,string>(cena,desc));
+        }
+        if(atributo == "[COMBATES]")
+        {
+            size_t pos_separator = line.find(':');
+            string monstro = line.substr(0,pos_separator);
+            string desc = line.substr(pos_separator + 2) ;
+            this->combates.push_back(pair<string,string>(monstro,desc));
         }
         if(atributo == "[ITENS]")
         {

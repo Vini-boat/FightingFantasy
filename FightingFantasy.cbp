@@ -84,6 +84,7 @@
 		<Unit filename="include/Models/ViewOption.h" />
 		<Unit filename="include/Views/BaseView.h" />
 		<Unit filename="include/Views/CenaView.h" />
+		<Unit filename="include/Views/CombateView.h" />
 		<Unit filename="include/Views/CreditosView.h" />
 		<Unit filename="include/Views/InventarioView.h" />
 		<Unit filename="include/Views/MenuView.h" />
@@ -118,6 +119,7 @@
 		<Unit filename="src/Models/ViewOption.cpp" />
 		<Unit filename="src/Views/BaseView.cpp" />
 		<Unit filename="src/Views/CenaView.cpp" />
+		<Unit filename="src/Views/CombateView.cpp" />
 		<Unit filename="src/Views/CreditosView.cpp" />
 		<Unit filename="src/Views/InventarioView.cpp" />
 		<Unit filename="src/Views/MenuView.cpp" />

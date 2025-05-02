@@ -30,6 +30,8 @@
 #include "../include/Models/ItemModel.h"
 #include "../include/Controllers/ItemController.h"
 
+#include "../include/Controllers/MonstroController.h"
+
 #include <map>
 #include <memory>
 #include <string>
@@ -54,6 +56,8 @@ Application::Application()
 
     shared_ptr<ItemController> item_controller = make_shared<ItemController>();
     item_controller->carregarItens();
+
+    shared_ptr<MonstroController> monstro_controller = make_shared<MonstroController>();
 
     CenaController* cena_controller = new CenaController(cena_view_model,save,this->personagem_atual);
     this->views["menu"] = make_unique<MenuView>();
@@ -97,6 +101,9 @@ Application::Application()
     this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual, item_controller);
     this->views["inventario"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "cenas"));
     this->views["inventario"]->addStaticOption("c","Usar provisao (cura 2 de energia)", make_shared<CurarCommand>(this->personagem_atual));
+
+    this->views["combate"] = make_unique<CombateView>(monstro_controller);
+    this->views["combate"]->addStaticOption("v","Voltar",make_shared<ChangeView>(this,"cenas"));
 
 
 }
