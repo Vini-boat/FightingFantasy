@@ -2,10 +2,11 @@
 #define NEWGAMEVIEWMODEL_H
 
 #include "../Models/BaseModel.h"
+#include "../Interfaces/IResetable.h"
 #include <string>
 
 using namespace std;
-class NewGameViewModel : public BaseModel
+class NewGameViewModel : public BaseModel, public IResetable
 {
     public:
         NewGameViewModel();
@@ -26,9 +27,10 @@ class NewGameViewModel : public BaseModel
         void setSorte(int sorte);
         int getSorte();
 
+        void setPontosRestantes(int pontos);
         int getPontosRestantes();
 
-        void reset();
+        void reset() override;
     private:
         int etapa_atual;
         int pontos_restantes;

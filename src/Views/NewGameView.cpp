@@ -27,16 +27,16 @@ void NewGameView::show()
     switch(this->model->getEtapa())
     {
     case 0:
-        cout << "   Digite o valor para Habilidade: ";
+        cout << "   Habilidade (6 a 12): ";
         break;
     case 1:
-        cout << "   Digite o valor para Energia: ";
+        cout << "   Energia (12 a 24): ";
         break;
     case 2:
-        cout << "   Digite o valor para Sorte: ";
+        cout << "   Sorte (6 a 12): ";
         break;
     case 3:
-        cout << "   Digite o nome do Personagem: ";
+        cout << "   Nome do Personagem: ";
         break;
     case 4:
         cout << "   Nome:       " << this->model->getNome() << endl;

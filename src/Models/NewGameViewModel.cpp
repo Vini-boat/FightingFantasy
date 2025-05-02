@@ -69,3 +69,8 @@ int NewGameViewModel::getPontosRestantes()
 {
     return this->pontos_restantes;
 }
+
+void NewGameViewModel::setPontosRestantes(int pontos)
+{
+    this->pontos_restantes = pontos;
+}

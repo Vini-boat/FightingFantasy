@@ -43,32 +43,41 @@ bool NewGameController::validarHabilidade(int habilidade)
 {
     if(habilidade < 6) return false;
     if(habilidade > 12) return false;
+    int diff = this->view_model->getPontosRestantes() - (habilidade - 6);
+    if(diff < 0) return false;
     return true;
 }
 bool NewGameController::validarEnergia(int energia)
 {
     if(energia < 12) return false;
     if(energia > 24) return false;
+    int diff = this->view_model->getPontosRestantes() - (energia - 12);
+    if(diff < 0) return false;
     return true;
 }
 bool NewGameController::validarSorte(int sorte)
 {
     if(sorte < 6) return false;
     if(sorte > 12) return false;
+    int diff = this->view_model->getPontosRestantes() - (sorte - 6);
+    if(diff < 0) return false;
     return true;
 }
 
 void NewGameController::setHabilidade(int habilidade)
 {
+    this->view_model->setPontosRestantes(this->view_model->getPontosRestantes() - habilidade + 6);
     this->view_model->setHabilidade(habilidade);
 }
 
 void NewGameController::setEnergia(int energia)
 {
+    this->view_model->setPontosRestantes(this->view_model->getPontosRestantes() - energia + 12);
     this->view_model->setEnergia(energia);
 }
 
 void NewGameController::setSorte(int sorte)
 {
+    this->view_model->setPontosRestantes(this->view_model->getPontosRestantes() - sorte + 6);
     this->view_model->setSorte(sorte);
 }

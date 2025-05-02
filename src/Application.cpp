@@ -16,6 +16,7 @@
 #include "../include/Commands/CarregarSave.h"
 #include "../include/Commands/MultiCommand.h"
 #include "../include/Commands/HelloCommand.h"
+#include "../include/Commands/ResetCommand.h"
 
 #include "../include/Views/InventarioView.h"
 #include "../include/Controllers/InventarioController.h"
@@ -60,13 +61,17 @@ Application::Application()
 
     this->views["newgame"]->addStaticOption("s","Confirmar Personagem", make_shared<MultiCommand>(
                                                             make_shared<MultiCommand>(
-                                                            make_shared<SalvarCommand>(new_game_controller),
-                                                            make_shared<CarregarSave>(cena_controller,save,personagem_atual,"ex_savegame")
+                                                                make_shared<SalvarCommand>(new_game_controller),
+                                                                make_shared<CarregarSave>(cena_controller,save,personagem_atual,"ex_savegame")
                                                             ),
                                                             make_shared<ChangeView>(this,"inventario")
                                                             )
                                       );
-    this->views["newgame"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "menu"));
+    this->views["newgame"]->addStaticOption("v","Voltar", make_shared<MultiCommand>(
+                                                        make_shared<ResetCommand>(new_game_view_model),
+                                                        make_shared<ChangeView>(this, "menu")
+                                                        )
+                                            );
 
     this->views["credits"] = make_unique<CreditosView>();
     this->views["credits"]->addStaticOption("v","Voltar",make_shared<ChangeView>(this, "menu"));
