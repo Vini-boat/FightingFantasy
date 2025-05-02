@@ -9,12 +9,13 @@
 
 
 #include <string>
+#include <memory>
 
 using namespace std;
 class NewGameController : public BaseController, public ISalvavel
 {
     public:
-        NewGameController(SaveModel* save, NewGameViewModel* view_model, PersonagemModel* model);
+        NewGameController(SaveModel* save, shared_ptr<NewGameViewModel> view_model, PersonagemModel* model);
         virtual ~NewGameController();
 
         void createNewPersonagem();
@@ -32,7 +33,7 @@ class NewGameController : public BaseController, public ISalvavel
 
     private:
         SaveModel* save;
-        NewGameViewModel* view_model;
+        shared_ptr<NewGameViewModel> view_model;
         PersonagemModel* model;
 };
 

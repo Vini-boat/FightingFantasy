@@ -22,7 +22,7 @@ class MonstroModel : public BaseModel, public ISerializavel
         int energia;
         int tesouro;
         int provisoes;
-        vector<int> id_itens;
+        vector<string> itens;
         int id_cena_vitoria;
         int id_cena_derrota;
 };

@@ -45,7 +45,7 @@ Application::Application()
     this->save = new SaveModel;
     this->personagem_atual = new PersonagemModel;
 
-    NewGameViewModel* new_game_view_model = new NewGameViewModel;
+    shared_ptr<NewGameViewModel> new_game_view_model = make_shared<NewGameViewModel>();
     NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
 
     CenaViewModel* cena_view_model = new CenaViewModel;
@@ -120,7 +120,8 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    ItemController controller;
-    controller.carregarItens();
-    string tipo = controller.getItemType("chave");
+    PersonagemModel p;
+    p.desserializar("ex_personagem.txt");
+    p.serializar("./data/personagens/vini.txt");
+    cout << "kkk" << endl;
 }

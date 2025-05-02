@@ -43,7 +43,7 @@ void MonstroModel::desserializar(string filename)
         if(prop == "[ENERGIA]") ss >> this->energia;
         if(prop == "[TESOURO]") ss >> this->tesouro;
         if(prop == "[PROVISOES]") ss >> this->provisoes;
-        if(prop == "[ITENS]"){int i; ss >> i; this->id_itens.push_back(i);};
+        if(prop == "[ITENS]") this->itens.push_back(line);
         if(prop == "[CENA_VITORIA]") ss >> this->id_cena_vitoria;
         if(prop == "[CENA_DERROTA]") ss >> this->id_cena_derrota;
     }

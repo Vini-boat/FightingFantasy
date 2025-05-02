@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 PersonagemModel::PersonagemModel()
@@ -52,13 +53,26 @@ int PersonagemModel::getSorte()
 
 void PersonagemModel::serializar(string filename)
 {
-    ofstream arquivo;
-    arquivo.open(filename);
-    arquivo << this->nome << endl;
-    arquivo << this->habilidade << endl;
-    arquivo << this->energia << endl;
-    arquivo << this->sorte << endl;
-    arquivo.close();
+    ofstream arq;
+    arq.open(filename);
+    arq << "[NOME]" << endl;
+    arq << this->nome << endl;
+    arq << "[HABILIDADE]" << endl;
+    arq << this->habilidade << endl;
+    arq << "[ENERGIA]" << endl;
+    arq << this->energia << endl;
+    arq << "[SORTE]" << endl;
+    arq << this->sorte << endl;
+    arq << "[TESOURO]" << endl;
+    arq << this->tesouro << endl;
+    arq << "[PROVISOES]" << endl;
+    arq << this->provisoes << endl;
+    arq << "[ITENS]" << endl;
+    for(string& i: this->itens)
+    {
+        arq << i << endl;
+    }
+    arq << "[FINAL]" << endl;
 
     ofstream index;
     index.open("./data/index/saves.txt");
@@ -68,12 +82,27 @@ void PersonagemModel::serializar(string filename)
 
 void PersonagemModel::desserializar(string filename)
 {
-
-    ifstream arquivo;
-    arquivo.open(filename);
-    arquivo >> this->nome;
-    arquivo >> this->habilidade;
-    arquivo >> this->energia;
-    arquivo >> this->sorte;
-    arquivo.close();
+    ifstream arq;
+    arq.open(filename);
+    string prop;
+    string line;
+    while(getline(arq,line))
+    {
+        if(line == "[NOME]") {prop = "[NOME]"; continue;};
+        if(line == "[HABILIDADE]") {prop = "[HABILIDADE]"; continue;};
+        if(line == "[ENERGIA]") {prop = "[ENERGIA]"; continue;};
+        if(line == "[SORTE]") {prop = "[SORTE]"; continue;};
+        if(line == "[TESOURO]") {prop = "[TESOURO]"; continue;};
+        if(line == "[PROVISOES]") {prop = "[PROVISOES]"; continue;};
+        if(line == "[ITENS]") {prop = "[ITENS]"; continue;};
+        if(line == "[FINAL]") break;
+        stringstream ss(line);
+        if(prop == "[NOME]") this->nome = line;
+        if(prop == "[HABILIDADE]") ss >> this->habilidade;
+        if(prop == "[ENERGIA]") ss >> this->energia;
+        if(prop == "[SORTE]") ss >> this->sorte;
+        if(prop == "[TESOURO]") ss >> this->tesouro;
+        if(prop == "[PROVISOES]") ss >> this->provisoes;
+        if(prop == "[ITENS]") this->itens.push_back(line);
+    }
 }

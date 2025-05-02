@@ -2,7 +2,10 @@
 
 #include "../../include/Interfaces/IResetable.h"
 
-ResetCommand::ResetCommand(IResetable* to_reset)
+#include <memory>
+
+using namespace std;
+ResetCommand::ResetCommand(shared_ptr<IResetable> to_reset)
 {
     this->to_reset = to_reset;
 }

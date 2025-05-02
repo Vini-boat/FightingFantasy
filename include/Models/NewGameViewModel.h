@@ -17,6 +17,7 @@ class NewGameViewModel : public BaseModel, public IResetable
 
         void setNome(string nome);
         string getNome();
+        string getNome2(); // sim é um absurdo, mas ele tava dando access violation quando tentava acessar a getNome()
 
         void setHabilidade(int habilidade);
         int getHabilidade();

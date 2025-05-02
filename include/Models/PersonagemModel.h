@@ -2,6 +2,7 @@
 #define PERSONAGEMMODEL_H
 
 #include <string>
+#include <vector>
 
 #include "../Models/BaseModel.h"
 #include "../Interfaces/ISerializavel.h"
@@ -34,7 +35,9 @@ class PersonagemModel : public BaseModel, public ISerializavel
         int habilidade;
         int energia;
         int sorte;
-
+        int tesouro;
+        int provisoes;
+        vector<string> itens;
 };
 
 #endif // PERSONAGEMMODEL_H

@@ -27,6 +27,10 @@ string NewGameViewModel::getNome()
 {
     return nome;
 }
+string NewGameViewModel::getNome2()
+{
+    return this->getNome();
+}
 
 void NewGameViewModel::setHabilidade(int habilidade)
 {

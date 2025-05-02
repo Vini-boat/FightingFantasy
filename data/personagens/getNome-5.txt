@@ -1,17 +1,14 @@
 [NOME]
-nome personagem
+getNome-5
 [HABILIDADE]
-6
+12
 [ENERGIA]
 12
 [SORTE]
-6
+12
 [TESOURO]
-100
+-1163005939
 [PROVISOES]
-4
+-1163005939
 [ITENS]
-chave
-adaga
-escudo
 [FINAL]

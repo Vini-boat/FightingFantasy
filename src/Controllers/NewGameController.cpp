@@ -4,9 +4,10 @@
 #include "../../include/Models/SaveModel.h"
 
 #include <string>
+#include <memory>
 
 using namespace std;
-NewGameController::NewGameController(SaveModel* save, NewGameViewModel* view_model, PersonagemModel* model)
+NewGameController::NewGameController(SaveModel* save, shared_ptr<NewGameViewModel> view_model, PersonagemModel* model)
 {
     this->save = save;
     this->view_model = view_model;
@@ -20,22 +21,23 @@ NewGameController::~NewGameController()
 
 void NewGameController::createNewPersonagem()
 {
-    this->model->setNome(this->view_model->getNome());
+    this->model->setNome(this->view_model->getNome2());
     this->model->setHabilidade(this->view_model->getHabilidade());
     this->model->setEnergia(this->view_model->getEnergia());
     this->model->setSorte(this->view_model->getSorte());
     //this->salvarPersonagem();
-    this->view_model->reset();
 }
 
 void NewGameController::salvar()
 {
+    string nome = this->view_model->getNome2();
     this->createNewPersonagem();
-    string filename = "./data/personagens/" + this->view_model->getNome() + ".txt";
+    string filename = "./data/personagens/" + nome + ".txt";
     this->model->serializar(filename);
     this->save->reset();
-    this->save->setPersonagem(this->view_model->getNome());
+    this->save->setPersonagem(nome);
     this->save->serializar("./data/saves/ex_savegame.txt");
+    this->view_model->reset();
 }
 
 

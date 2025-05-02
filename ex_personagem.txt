@@ -10,6 +10,8 @@ nome personagem
 100
 [PROVISOES]
 4
-[EQUIPAMENTOS]
-O:0
-X:1
+[ITENS]
+chave
+adaga
+escudo
+[FINAL]

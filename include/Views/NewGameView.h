@@ -2,6 +2,7 @@
 #define NEWGAMEVIEW_H
 
 #include <string>
+#include <memory>
 #include <BaseView.h>
 
 #include "../Models/NewGameViewModel.h"
@@ -11,7 +12,7 @@ using namespace std;
 class NewGameView : public BaseView
 {
     public:
-        NewGameView(NewGameController* controller, NewGameViewModel* model);
+        NewGameView(NewGameController* controller, shared_ptr<NewGameViewModel> model);
         virtual ~NewGameView();
         void show() override;
         void handleInput() override;
@@ -19,7 +20,7 @@ class NewGameView : public BaseView
 
     private:
         NewGameController* controller;
-        NewGameViewModel* model;
+        shared_ptr<NewGameViewModel> model;
 };
 
 #endif // NEWGAMEVIEW_H

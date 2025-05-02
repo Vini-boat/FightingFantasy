@@ -9,9 +9,10 @@ nome monstro
 [PROVISOES]
 1
 [ITENS]
-1
-2
+chave
+escudo
 [CENA_VITORIA]
 4
 [CENA_DERROTA]
 6
+[FINAL]

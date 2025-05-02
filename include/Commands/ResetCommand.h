@@ -4,14 +4,17 @@
 #include <ICommand.h>
 #include "../../include/Interfaces/IResetable.h"
 
+#include <memory>
+
+using namespace std;
 class ResetCommand : public ICommand
 {
     public:
-        ResetCommand(IResetable* to_reset);
+        ResetCommand(shared_ptr<IResetable> to_reset);
         virtual ~ResetCommand();
         void execute() override;
     private:
-        IResetable* to_reset;
+        shared_ptr<IResetable> to_reset;
 };
 
 #endif // RESETCOMMAND_H

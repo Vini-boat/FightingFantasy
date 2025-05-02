@@ -3,10 +3,11 @@
 #include "../../include/Models/NewGameViewModel.h"
 
 #include <string>
+#include <memory>
 #include <iostream>
 
 using namespace std;
-NewGameView::NewGameView(NewGameController* controller, NewGameViewModel* model)
+NewGameView::NewGameView(NewGameController* controller, shared_ptr<NewGameViewModel> model)
 {
     this->controller = controller;
     this->model = model;
@@ -39,7 +40,7 @@ void NewGameView::show()
         cout << "   Nome do Personagem: ";
         break;
     case 4:
-        cout << "   Nome:       " << this->model->getNome() << endl;
+        cout << "   Nome:       " << this->model->getNome2() << endl;
         cout << endl;
         cout << "   Habilidade: " << this->model->getHabilidade() << endl;
         cout << "   Energia:    " << this->model->getEnergia() << endl;
