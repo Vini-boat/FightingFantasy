@@ -27,6 +27,7 @@
 #include "../include/Models/SaveModel.h"
 #include "../include/Models/MonstroModel.h"
 #include "../include/Models/ItemModel.h"
+#include "../include/Controllers/ItemController.h"
 
 #include <map>
 #include <memory>
@@ -119,7 +120,7 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    ItemModel item;
-    item.desserializar("ex_item.txt");
-
+    ItemController controller;
+    controller.carregarItens();
+    string tipo = controller.getItemType("chave");
 }

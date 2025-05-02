@@ -40,3 +40,8 @@ void ItemModel::desserializar(string filename)
         if(prop == "[MODIFICADOR]") ss >> this->modificador;
     }
 }
+
+string ItemModel::getType()
+{
+    return this->tipo;
+}

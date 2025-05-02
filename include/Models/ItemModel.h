@@ -15,6 +15,8 @@ class ItemModel : public BaseModel, public ISerializavel
 
         void serializar(string filename) override;
         void desserializar(string filename) override;
+
+        string getType();
     private:
         string nome;
         string tipo;

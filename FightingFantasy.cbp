@@ -60,6 +60,7 @@
 		<Unit filename="include/Controllers/BaseController.h" />
 		<Unit filename="include/Controllers/CenaController.h" />
 		<Unit filename="include/Controllers/InventarioController.h" />
+		<Unit filename="include/Controllers/ItemController.h" />
 		<Unit filename="include/Controllers/NewGameController.h" />
 		<Unit filename="include/Controllers/SaveController.h" />
 		<Unit filename="include/Interfaces/ICenaRouter.h" />
@@ -99,6 +100,7 @@
 		<Unit filename="src/Controllers/BaseController.cpp" />
 		<Unit filename="src/Controllers/CenaController.cpp" />
 		<Unit filename="src/Controllers/InventarioController.cpp" />
+		<Unit filename="src/Controllers/ItemController.cpp" />
 		<Unit filename="src/Controllers/NewGameController.cpp" />
 		<Unit filename="src/Controllers/SaveController.cpp" />
 		<Unit filename="src/Models/BaseModel.cpp" />
