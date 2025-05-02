@@ -1,5 +1,5 @@
 [PERSONAGEM]
-bug_fix2
+teste_itens
 [CENAS_PASSADAS]
 1
 1
@@ -7,6 +7,5 @@ bug_fix2
 5
 10
 13
-14
 [CENA_ATUAL]
-14
+13

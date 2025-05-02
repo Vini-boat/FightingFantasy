@@ -17,8 +17,10 @@ class ItemModel : public BaseModel, public ISerializavel
         void desserializar(string filename) override;
 
         string getType();
+        string getDescricao();
     private:
         string nome;
+        string descricao;
         string tipo;
         int bonus_combate;
         int modificador;

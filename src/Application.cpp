@@ -51,6 +51,9 @@ Application::Application()
     CenaViewModel* cena_view_model = new CenaViewModel;
     cena_view_model->carregarCenas();
 
+    shared_ptr<ItemController> item_controller = make_shared<ItemController>();
+    item_controller->carregarItens();
+
     CenaController* cena_controller = new CenaController(cena_view_model,save,this->personagem_atual);
     this->views["menu"] = make_unique<MenuView>();
     this->views["menu"]->addStaticOption("n","Novo jogo", make_shared<ChangeView>(this, "newgame"));
@@ -90,7 +93,7 @@ Application::Application()
                                          );
     this->views["savedgames"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "menu"));
 
-    this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual);
+    this->views["inventario"] = make_unique<InventarioView>(new InventarioController(this->personagem_atual),this->personagem_atual, item_controller);
     this->views["inventario"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "cenas"));
 
 

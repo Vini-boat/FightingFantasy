@@ -16,6 +16,7 @@ class ItemController : public BaseController
         virtual ~ItemController();
         void carregarItens();
         string getItemType(string nome);
+        string getItemDescription(string nome);
     private:
         map<string,unique_ptr<ItemModel>> itens;
 };

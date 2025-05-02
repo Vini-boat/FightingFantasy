@@ -1,5 +1,7 @@
 [NOME]
 adaga
+[DESCRICAO]
++2 de dano
 [TIPO]
 arma
 [COMBATE]

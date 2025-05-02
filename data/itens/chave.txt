@@ -1,5 +1,7 @@
 [NOME]
 chave
+[DESCRICAO]
+Abre a porta
 [TIPO]
 normal
 [COMBATE]

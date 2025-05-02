@@ -32,3 +32,9 @@ string ItemController::getItemType(string nome)
 {
     return this->itens[nome]->getType();
 }
+
+string ItemController::getItemDescription(string nome)
+{
+    return this->itens[nome]->getDescricao();
+}
+

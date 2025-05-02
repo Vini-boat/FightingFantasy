@@ -1,15 +1,18 @@
 #include "InventarioView.h"
 #include "../../include/Controllers/InventarioController.h"
 #include "../../include/Models/PersonagemModel.h"
+#include "../../include/Controllers/ItemController.h"
 
 #include <string>
 #include <iostream>
+#include <memory>
 
 using namespace std;
-InventarioView::InventarioView(InventarioController* controller, PersonagemModel* model)
+InventarioView::InventarioView(InventarioController* controller, PersonagemModel* model, shared_ptr<ItemController> item_controller)
 {
     this->controller = controller;
     this->model = model;
+    this->item_controller = item_controller;
 }
 
 InventarioView::~InventarioView()
@@ -33,7 +36,7 @@ void InventarioView::show()
     int i=0;
     for(string& item: this->model->getItens())
     {
-        cout << "   " << i << ": " << item << endl;
+        cout << "   " << i << ": " << item << " | " << this->item_controller->getItemDescription(item) << endl;
         i++;
     }
     cout << endl;

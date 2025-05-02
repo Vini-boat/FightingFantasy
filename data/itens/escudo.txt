@@ -1,5 +1,7 @@
 [NOME]
 escudo
+[DESCRICAO]
++2 de defesa
 [TIPO]
 armadura
 [COMBATE]
