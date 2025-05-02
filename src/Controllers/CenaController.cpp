@@ -27,6 +27,7 @@ void CenaController::changeCena(string cena)
     this->salvar();
 
     this->addItensToPlayer();
+    this->player->setTesouro(this->player->getTesouro() + this->model->getTesouroCenaAtual());
 }
 
 void CenaController::salvar()

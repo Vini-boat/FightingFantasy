@@ -28,6 +28,7 @@ class CenaViewModel : public BaseModel, public ISerializavel
         vector<string> getCenasEscolhasCenaAtual();
         vector<string> getDescricaoEscolhasCenaAtual();
         vector<string> getItensCenaAtual();
+        int getTesouroCenaAtual();
 
         vector<string> getNomesCenas();
         vector<string> getTextoCenas();

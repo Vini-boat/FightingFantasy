@@ -27,6 +27,7 @@ class CenaModel : public BaseModel, public ISerializavel
     private:
         string text;
         vector<pair<string,string>> escolhas;
+        int tesouro;
         vector<string> itens;
 };
 

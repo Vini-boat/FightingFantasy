@@ -48,26 +48,31 @@ void CenaModel::serializar(string filename)
 
 void CenaModel::desserializar(string filename)
 {
+    this->escolhas.clear();
+    this->itens.clear();
+    this->tesouro = 0;
     ifstream arq;
     arq.open(filename);
     string line;
     string atributo;
     while(getline(arq,line))
     {
-        if(line == "[TEXTO]"){atributo = "texto";continue;};
-        if(line == "[ESCOLHAS]"){atributo = "escolhas";continue;};
-        if(line == "[ITENS]"){atributo = "itens";continue;}
+        if(line == "[TEXTO]"){atributo = "[TEXTO]";continue;};
+        if(line == "[ESCOLHAS]"){atributo = "[ESCOLHAS]";continue;};
+        if(line == "[ITENS]"){atributo = "[ITENS]";continue;};
+        if(line == "[TESOURO]"){atributo = "[TESOURO]";continue;};
         if(line == "[FINAL]") break;
-
-        if(atributo == "texto") this->text += line += '\n';
-        if(atributo == "escolhas")
+        sstream ss(line);
+        if(atributo == "[TEXTO]") this->text += line += '\n';
+        if(atributo == "[TESOURO]"){int i; ss >> i; this->tesouro = i;};
+        if(atributo == "[ESCOLHAS]")
         {
             size_t pos_separator = line.find(':');
             string cena = line.substr(0,pos_separator);
             string desc = line.substr(pos_separator + 2) ;
             this->escolhas.push_back(pair<string,string>(cena,desc));
         }
-        if(atributo == "itens")
+        if(atributo == "[ITENS]")
         {
             this->itens.push_back(line);
         }

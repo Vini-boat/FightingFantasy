@@ -96,3 +96,8 @@ vector<string> CenaViewModel::getItensCenaAtual()
 {
     return this->cenas[this->cena_atual]->getItens();
 }
+
+int CenaViewModel::getTesouroCenaAtual()
+{
+    return this->cenas[this->cena_atual]->getTesouro();
+}
