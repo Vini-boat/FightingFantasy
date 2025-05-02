@@ -1,0 +1,8 @@
+[NOME]
+escudo
+[TIPO]
+armadura
+[COMBATE]
+0
+[MODIFICADOR]
+2

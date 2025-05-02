@@ -1,0 +1,8 @@
+[NOME]
+adaga
+[TIPO]
+arma
+[COMBATE]
+1
+[MODIFICADOR]
+2

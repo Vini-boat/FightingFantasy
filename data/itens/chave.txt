@@ -1,0 +1,8 @@
+[NOME]
+chave
+[TIPO]
+normal
+[COMBATE]
+0
+[MODIFICADOR]
+0
