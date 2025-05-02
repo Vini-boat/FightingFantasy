@@ -1,18 +1,22 @@
-- [ ] Tela de Abertura
-  - [ ] Novo jogo
+- [X] Tela de Abertura
+  - [X] Novo jogo
     - [X] Formulário
-    - [ ] Limitar pontos de atributo
+    - [X] Limitar pontos de atributo
   - [X] Carregar jogo salvo
     - [X] Carregar Jogo	  
   - [X] Créditos
-  - [X] Sair
+  - [X] Sair 
 - [ ] Tela de inventário
   - [X] Listar atributos
-  - [ ] Listar Itens
+  - [X] Listar Itens
   - [ ] Usar provisões
 - [ ] Tela Padrão (Cena)
   - [X] CenaRouter
   - [X] Salvar Automaticamente
+  - [ ] Escolha de combate
+  - [ ] Escolhas forçadas (pode ser uma cena com uma escolha só)
+  - [ ] Escolhas limitadas por item
+  - [X] Adicionar itens ao inventário
 - [ ] Tela Combate
   - [ ] Monstro
   - [ ] Atacar
