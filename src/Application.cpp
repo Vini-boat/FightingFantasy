@@ -43,19 +43,27 @@ Application::Application()
     this->save = new SaveModel;
     this->personagem_atual = new PersonagemModel;
 
+    NewGameViewModel* new_game_view_model = new NewGameViewModel;
+    NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
+
+    CenaViewModel* cena_view_model = new CenaViewModel;
+    cena_view_model->carregarCenas();
+
+    CenaController* cena_controller = new CenaController(cena_view_model,save);
     this->views["menu"] = make_unique<MenuView>();
     this->views["menu"]->addStaticOption("n","Novo jogo", make_shared<ChangeView>(this, "newgame"));
     this->views["menu"]->addStaticOption("s","Carregar Jogo",make_shared<ChangeView>(this, "savedgames"));
     this->views["menu"]->addStaticOption("c","Creditos",make_shared<ChangeView>(this, "credits"));
     this->views["menu"]->addStaticOption("z","Sair",make_shared<Sair>(this));
 
-    NewGameViewModel* new_game_view_model = new NewGameViewModel;
-    NewGameController* new_game_controller = new NewGameController(save, new_game_view_model, this->personagem_atual);
     this->views["newgame"] = make_unique<NewGameView>(new_game_controller, new_game_view_model);
 
     this->views["newgame"]->addStaticOption("s","Confirmar Personagem", make_shared<MultiCommand>(
+                                                            make_shared<MultiCommand>(
                                                             make_shared<SalvarCommand>(new_game_controller),
-                                                            make_shared<ChangeView>(this,"savedgames")
+                                                            make_shared<CarregarSave>(cena_controller,save,personagem_atual,"ex_savegame")
+                                                            ),
+                                                            make_shared<ChangeView>(this,"inventario")
                                                             )
                                       );
     this->views["newgame"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "menu"));
@@ -63,10 +71,7 @@ Application::Application()
     this->views["credits"] = make_unique<CreditosView>();
     this->views["credits"]->addStaticOption("v","Voltar",make_shared<ChangeView>(this, "menu"));
 
-    CenaViewModel* cena_view_model = new CenaViewModel;
-    cena_view_model->carregarCenas();
 
-    CenaController* cena_controller = new CenaController(cena_view_model,save);
     this->views["cenas"] = make_unique<CenaView>(cena_controller);
     this->views["cenas"]->addStaticOption("i","Inventario",make_shared<ChangeView>(this, "inventario"));
     this->views["cenas"]->addStaticOption("m","Voltar para o Menu", make_shared<ChangeView>(this, "menu"));

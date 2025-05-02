@@ -2,7 +2,5 @@
 
 [CENAS_PASSADAS]
 1
-1
-4
 [CENA_ATUAL]
-4
+1
