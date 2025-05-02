@@ -49,6 +49,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Application.h" />
+		<Unit filename="include/Commands/AtacarCommand.h" />
 		<Unit filename="include/Commands/CarregarSave.h" />
 		<Unit filename="include/Commands/ChangeCena.h" />
 		<Unit filename="include/Commands/ChangeView.h" />
@@ -58,12 +59,16 @@
 		<Unit filename="include/Commands/ResetCommand.h" />
 		<Unit filename="include/Commands/Sair.h" />
 		<Unit filename="include/Commands/SalvarCommand.h" />
+		<Unit filename="include/Commands/SetMonsterCommand.h" />
 		<Unit filename="include/Controllers/BaseController.h" />
 		<Unit filename="include/Controllers/CenaController.h" />
+		<Unit filename="include/Controllers/CombateController.h" />
 		<Unit filename="include/Controllers/InventarioController.h" />
 		<Unit filename="include/Controllers/ItemController.h" />
+		<Unit filename="include/Controllers/MonstroController.h" />
 		<Unit filename="include/Controllers/NewGameController.h" />
 		<Unit filename="include/Controllers/SaveController.h" />
+		<Unit filename="include/Interfaces/IAtaque.h" />
 		<Unit filename="include/Interfaces/ICenaRouter.h" />
 		<Unit filename="include/Interfaces/ICommand.h" />
 		<Unit filename="include/Interfaces/ICuravel.h" />
@@ -71,6 +76,7 @@
 		<Unit filename="include/Interfaces/IRunner.h" />
 		<Unit filename="include/Interfaces/ISalvavel.h" />
 		<Unit filename="include/Interfaces/ISerializavel.h" />
+		<Unit filename="include/Interfaces/ISetMonstro.h" />
 		<Unit filename="include/Interfaces/IViewRouter.h" />
 		<Unit filename="include/Models/BaseModel.h" />
 		<Unit filename="include/Models/CenaModel.h" />
@@ -92,6 +98,7 @@
 		<Unit filename="include/Views/SavedGamesView.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Application.cpp" />
+		<Unit filename="src/Commands/AtacarCommand.cpp" />
 		<Unit filename="src/Commands/CarregarSave.cpp" />
 		<Unit filename="src/Commands/ChangeCena.cpp" />
 		<Unit filename="src/Commands/ChangeView.cpp" />
@@ -101,10 +108,13 @@
 		<Unit filename="src/Commands/ResetCommand.cpp" />
 		<Unit filename="src/Commands/Sair.cpp" />
 		<Unit filename="src/Commands/SalvarCommand.cpp" />
+		<Unit filename="src/Commands/SetMonsterCommand.cpp" />
 		<Unit filename="src/Controllers/BaseController.cpp" />
 		<Unit filename="src/Controllers/CenaController.cpp" />
+		<Unit filename="src/Controllers/CombateController.cpp" />
 		<Unit filename="src/Controllers/InventarioController.cpp" />
 		<Unit filename="src/Controllers/ItemController.cpp" />
+		<Unit filename="src/Controllers/MonstroController.cpp" />
 		<Unit filename="src/Controllers/NewGameController.cpp" />
 		<Unit filename="src/Controllers/SaveController.cpp" />
 		<Unit filename="src/Models/BaseModel.cpp" />

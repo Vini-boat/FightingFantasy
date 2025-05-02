@@ -18,11 +18,13 @@
 #include "../include/Commands/HelloCommand.h"
 #include "../include/Commands/ResetCommand.h"
 #include "../include/Commands/CurarCommand.h"
+#include "../include/Commands/AtacarCommand.h"
 
 #include "../include/Views/InventarioView.h"
 #include "../include/Controllers/InventarioController.h"
 
 #include "../include/Views/CenaView.h"
+#include "../include/Views/CombateView.h"
 
 #include "../include/Models/CenaViewModel.h"
 #include "../include/Models/SaveModel.h"
@@ -36,6 +38,7 @@
 #include <memory>
 #include <string>
 #include <iostream>
+#include <random>
 
 using namespace std;
 Application::Application()
@@ -58,6 +61,9 @@ Application::Application()
     item_controller->carregarItens();
 
     shared_ptr<MonstroController> monstro_controller = make_shared<MonstroController>();
+    monstro_controller->carregarMonstros();
+
+    shared_ptr<CombateController> combate_controller = make_shared<CombateController>(monstro_controller,this->personagem_atual);
 
     CenaController* cena_controller = new CenaController(cena_view_model,save,this->personagem_atual);
     this->views["menu"] = make_unique<MenuView>();
@@ -86,7 +92,7 @@ Application::Application()
     this->views["credits"]->addStaticOption("v","Voltar",make_shared<ChangeView>(this, "menu"));
 
 
-    this->views["cenas"] = make_unique<CenaView>(cena_controller);
+    this->views["cenas"] = make_unique<CenaView>(cena_controller, make_shared<ChangeView>(this,"combate"),combate_controller);
     this->views["cenas"]->addStaticOption("i","Inventario",make_shared<ChangeView>(this, "inventario"));
     this->views["cenas"]->addStaticOption("m","Voltar para o Menu", make_shared<ChangeView>(this, "menu"));
 
@@ -102,8 +108,9 @@ Application::Application()
     this->views["inventario"]->addStaticOption("v","Voltar", make_shared<ChangeView>(this, "cenas"));
     this->views["inventario"]->addStaticOption("c","Usar provisao (cura 2 de energia)", make_shared<CurarCommand>(this->personagem_atual));
 
-    this->views["combate"] = make_unique<CombateView>(monstro_controller);
+    this->views["combate"] = make_unique<CombateView>(combate_controller);
     this->views["combate"]->addStaticOption("v","Voltar",make_shared<ChangeView>(this,"cenas"));
+    this->views["combate"]->addStaticOption("a","Atacar",make_shared<AtacarCommand>(combate_controller));
 
 
 }
@@ -133,8 +140,5 @@ void Application::changeCurrentView(string view_name)
 
 void Application::debug()
 {
-    PersonagemModel p;
-    p.desserializar("ex_personagem.txt");
-    p.serializar("./data/personagens/vini.txt");
-    cout << "kkk" << endl;
+
 }

@@ -23,6 +23,10 @@ class CenaController : public BaseController, public ICenaRouter
         string getCenaName();
         vector<string> getEscolhasCena();
         vector<string> getDescricaoEscolhasCena();
+
+        vector<string> getMonstrosCombates();
+        vector<string> getDescricaoCombates();
+
         void carregarSave() override;
         void addItensToPlayer();
 

@@ -16,6 +16,14 @@ class MonstroModel : public BaseModel, public ISerializavel
         void serializar(string filename) override;
         void desserializar(string filename) override;
 
+        int getHabilidade();
+        int getEnergia();
+        int getTesouro();
+        int getProvisoes();
+        vector<string> getItens();
+        int getCenaVitoria();
+        int getCenaDerrota();
+
     private:
         string nome;
         int habilidade;

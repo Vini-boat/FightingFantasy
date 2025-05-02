@@ -1,6 +1,8 @@
 [PERSONAGEM]
-tesouro
+combate
 [CENAS_PASSADAS]
 1
-[CENA_ATUAL]
 1
+2
+[CENA_ATUAL]
+2

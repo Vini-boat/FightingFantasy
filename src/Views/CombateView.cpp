@@ -1,14 +1,14 @@
 #include "CombateView.h"
-#include "../Controllers/MonstroController.h"
+#include "../Controllers/CombateController.h"
 
 #include <memory>
 #include <iostream>
 #include <string>
 
 using namespace std;
-CombateView::CombateView(shared_ptr<MonstroController> monstro_controller)
+CombateView::CombateView(shared_ptr<CombateController> combate_controller)
 {
-    this->monstro_controller = monstro_controller;
+    this->combate_controller = combate_controller;
 }
 
 CombateView::~CombateView()
@@ -21,12 +21,17 @@ void CombateView::show()
     limparTela();
     cout << "========== COMBATE ==========" << endl;
     cout << endl;
+    cout << "   " << this->combate_controller->getNomeMonstro() << endl;
+    cout << "   Energia: " << this->combate_controller->getEnergiaAtual() << "/" << this->combate_controller->getEnergiaMaximaMonstro() << endl;
+    cout << endl;
+    cout << "   " << this->combate_controller->getPlayerName() << endl;
+    cout << "   Energia: " << this->combate_controller->getEnergiaPlayer() << "/" << this->combate_controller->getEnergiaMaximaPlayer() << endl;
     printOptions();
 }
 
 void CombateView::handleInput()
 {
-    resetOpcoes();
+    //resetOpcoes();
     string t = getValidOption();
     executeOption(t);
 }

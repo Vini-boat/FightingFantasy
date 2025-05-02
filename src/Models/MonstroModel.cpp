@@ -48,3 +48,33 @@ void MonstroModel::desserializar(string filename)
         if(prop == "[CENA_DERROTA]") ss >> this->id_cena_derrota;
     }
 }
+
+int MonstroModel::getHabilidade()
+{
+    return this->habilidade;
+}
+int MonstroModel::getEnergia()
+{
+    return this->energia;
+}
+int MonstroModel::getTesouro()
+{
+    return this->tesouro;
+}
+int MonstroModel::getProvisoes()
+{
+    return this->provisoes;
+}
+vector<string> MonstroModel::getItens()
+{
+    return this->itens;
+}
+int MonstroModel::getCenaVitoria()
+{
+    return this->id_cena_vitoria;
+}
+int MonstroModel::getCenaDerrota()
+
+{
+    return this->id_cena_derrota;
+}

@@ -101,3 +101,12 @@ int CenaViewModel::getTesouroCenaAtual()
 {
     return this->cenas[this->cena_atual]->getTesouro();
 }
+
+vector<string> CenaViewModel::getMonstrosCombatesCenaAtual()
+{
+    return this->cenas[this->cena_atual]->getMonstrosCombates();
+}
+vector<string> CenaViewModel::getDescricaoCombatesCenaAtual()
+{
+    return this->cenas[this->cena_atual]->getDescricaoCombates();
+}

@@ -67,3 +67,12 @@ void CenaController::addItensToPlayer()
     }
     this->player->salvar();
 }
+
+vector<string> CenaController::getMonstrosCombates()
+{
+    return this->model->getMonstrosCombatesCenaAtual();
+}
+vector<string> CenaController::getDescricaoCombates()
+{
+    return this->model->getDescricaoCombatesCenaAtual();
+}

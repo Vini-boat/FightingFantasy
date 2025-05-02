@@ -3,7 +3,8 @@ Voce entrou em uma caverna. No chao, correntes partidas. Ha sinais de lutas, san
 Um goblin salta das sombras, rosnando com um punhal em maos!
 
 (TC – Combate com Goblin)
+[COMBATES]
+goblin: Combate!
 [ESCOLHAS]
-5: Continuar apos derrota-lo
 10: correr com medo que apareça mais goblins (voce corre sem olhar para traz!)
 [FINAL]
