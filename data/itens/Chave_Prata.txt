@@ -1,0 +1,8 @@
+[NOME]
+Chave_Prata
+[TIPO]
+consumivel
+[COMBATE]
+0
+[MODIFICADOR]
+1

@@ -1,0 +1,8 @@
+[NOME]
+Adaga_Runica
+[TIPO]
+arma
+[COMBATE]
+1
+[MODIFICADOR]
++5

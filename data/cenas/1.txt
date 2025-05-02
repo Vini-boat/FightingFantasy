@@ -1,8 +1,8 @@
 [TEXTO]
-Dor. Escuridao. Umidade. Você acorda deitado em pedra fria. Seus musculos doem como se tivesse lutado contra um exercito. Uma tocha fraca crepita ao seu lado. Seu peito arde — ha uma marca, uma espécie de selo queimado em carne viva.
-Voce nao lembra o proprio nome. Mas ha uma espada curta em sua cintura, um colar com um simbolo estranho e duas passagens diante de voce.
+Dor. Escuridao. Umidade. Você acorda deitado em pedra fria. Seus musculos doem como se tivesse lutado contra um exercito. Uma tocha fraca crepita ao seu lado. Seu peito arde — ha uma marca, uma especie de selo queimado em carne viva.
+Voce nao lembra o proprio nome. Mas ha uma espada curta em sua cintura, e uma passagem diante de voce!
+
 [ESCOLHAS]
-2: Seguir pela passagem da direita, onde correntes enferrujadas estão no chão
-3: Entrar pela esquerda, de onde vem um vento gelado
-4: Vasculhar a sala por pistas
+2: Seguir pela passagem da direita, onde correntes enferrujadas estao no chao
+3: Vasculhar a sala por pistas
 [FINAL]

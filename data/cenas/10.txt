@@ -1,9 +1,6 @@
 [TEXTO]
-Voce segue pelo caminho da direita. A umidade O som de goteiras ecoa, abafando seus passos. O barulho da agua aumenta
+Voce bate forte na porta… Silencio. E entao, um som BRUSCO!!
+Sem aviso, a GARGULA  ataca!
 
-voce esta dinate de uma cachoieira subterranea...atraz dela um Clarao.Ao lado uma Estatua lapidada, uma figura infernal!
-
-[ESCOLHAS]
-13: Vasculhar em volta da estatua
-14: Adentrar a cachoeira
-[FINAL]
+[COMBATES]
+gargula: Combate !

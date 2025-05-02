@@ -3,7 +3,7 @@ teste
 [HABILIDADE]
 12
 [ENERGIA]
-12
+0
 [ENERGIA_MAXIMA]
 12
 [SORTE]
@@ -13,4 +13,6 @@ teste
 [PROVISOES]
 2
 [ITENS]
+Chave_Prata
+Amuleto_Abissal
 [FINAL]

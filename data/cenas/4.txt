@@ -1,9 +1,7 @@
 [TEXTO]
-Vasculhando a sala inicial, você encontra algo escondido sob um entulho de pedras:
-Uma Pequena Runa Branca envolta em pano. Ela pulsa levemente quando chega perto da sua marca no peito.
+Voce atravessa um corredor gelado ate uma sala circular. No teto, formaçoes pontiagudas de gelo. Ha um pedestal ao centro com inscricoes antigas.
+O ar e denso aqui… pesado.
 
-id I: Runa Branca;c;0;0;0
 [ESCOLHAS]
-2: Ir para a passagem da direita
-3: Ir para a esquerda, onde o vento sopra
-[FINAL]
+6: Tocar o pedestal
+5: Seguir adiante sem perder tempo!

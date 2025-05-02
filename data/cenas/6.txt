@@ -1,8 +1,8 @@
 [TEXTO]
-Voce entra no corredor escuro. Ele se estende por metros, ate encontrar uma porta de ferro antiga com uma fechadura enferrujada.
-O colar em seu pescoço vibra — algo atras daquela porta esta vivo.
+#6
+Ao tocar o pedestal,vem um fragmento de memoria. Voce esta preso, diante de eremitas… um portal surge. Um sacrificio? apos vislumbrar encima do pedestal ha uma chave, uma passagem se abre parecendo lhe chamar
+
+[ITENS]
+Chave_Prata
 [ESCOLHAS]
-11: Usar a chave prateada na porta
-12: Bater com força, Dando uma ombrada
-9: Vasculhar ao redor da porta antes de agir
-[FINAL]
+8: Seguir pela passagem secreta

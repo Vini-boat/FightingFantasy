@@ -1,7 +1,6 @@
 [TEXTO]
-Voce atravessa o corredor gelado ate uma sala circular. No teto, formações pontiagudas de gelo. Há um pedestal ao centro com inscricoes antigas.
-O ar e denso aqui… pesado.
+Vasculhando a sala inicial, voce encontra algo escondido sob um entulho de pedras: Uma Pequena Runa Branca envolta em pano. Ela pulsa levemente quando chega perto da sua marca no peito.
+[ITENS]
+Runa_Guardia
 [ESCOLHAS]
-6: Tocar o pedestal
-7: Ignorar o pedestal e seguir pelo corredor escuro à frente
-[FINAL]
+2: Seguir pela passagem da direita, onde correntes enferrujadas estão no chão

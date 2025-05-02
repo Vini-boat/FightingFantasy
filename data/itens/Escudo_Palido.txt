@@ -1,10 +1,8 @@
 [NOME]
-adaga
-[DESCRICAO]
-+2 de dano
+Escudo_Palido
 [TIPO]
-arma
+armadura
 [COMBATE]
 1
 [MODIFICADOR]
-2
++5

@@ -1,7 +1,7 @@
 [TEXTO]
-Procurando ao redor, nota um artefato com inscricoes demoniacas. Em sua mao, um Amuleto Abissal. Ao tocalo, visoes do passado inundam sua mente: você foi um campeão sacrificado para selar o demonio que agora desperta. Voce se sente fora de controle
+Procurando ao redor, nota um artefato com inscrições demoniacas. Em sua mao, um Amuleto Abissal. Ao toca-lo, visoes do passado inundam sua mente: você foi um campeao sacrificado para selar o demonio que agora desperta. Voce se sente fora de controle
+
 [ITENS]
-chave
+Amuleto_Abissal
 [ESCOLHAS]
-14: Adentrar a cachoeira
-[FINAL]
+15: Adentrar a cachoeira/Portal

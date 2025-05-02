@@ -9,6 +9,8 @@
 #include "../../include/Controllers/CenaController.h"
 #include <memory>
 #include <random>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 CombateController::CombateController(shared_ptr<MonstroController> monstro_controller, PersonagemModel* player, shared_ptr<ChangeView> change_to_cenas_view, CenaController* cena_controller)
@@ -17,6 +19,8 @@ CombateController::CombateController(shared_ptr<MonstroController> monstro_contr
     this->player = player;
     this->change_to_cenas_view = change_to_cenas_view;
     this->cena_controller = cena_controller;
+    unsigned seed = time(0);
+    srand(seed);
 }
 
 CombateController::~CombateController(){}
@@ -64,11 +68,7 @@ string CombateController::getPlayerName()
 
 int CombateController::getRandomInt(int low, int upp)
 {
-    random_device rd;                         // fonte de aleatoriedade
-    mt19937 gen(rd());                        // motor Mersenne Twister
-    uniform_int_distribution<> distr(low, upp);  // intervalo [1, 12]
-
-    return  distr(gen);
+    return  1+rand()%upp;
 }
 
 void CombateController::ataque()
@@ -76,6 +76,7 @@ void CombateController::ataque()
     int dano = 2;
     int fa_monstro = getRandomInt(1,10) + this->monstro_controller->getHabilidade(this->monstro_atual);
     int fa_player =  getRandomInt(1,10) + this->player->getHabilidade();
+
     if(fa_monstro > fa_player) this->player->setEnergia(this->player->getEnergia() - dano);
     if(fa_player > fa_monstro) this->setEnergiaAtual(this->energia_atual - dano);
     if(this->energia_atual <= 0)

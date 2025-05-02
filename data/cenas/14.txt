@@ -1,9 +1,10 @@
 [TEXTO]
-Voce atravessa o arco final. O calor e sufocante. Labaredas contornam um trono de ossos, onde jaz o Demonio do Veu, quebrando suas correntes. ele despertou ao sentir sua presenca. O selo em seu peito queima.
+Voce vasculha a area e encontra um bau antigo. Dentro, um pano enrolado esconde uma inscricao: “O selo só se quebra com verdade, sangue ou submissao.”
 
-o Demonio Urge:
-- Seras meu sucessor... ou o arauto de minha destruicao? 
+Ao lado, repousa uma lamina brilhante, marcada com o mesmo simbolo queimado em seu peito.
 
-(TC – Combate com Demonio Aprisionado)
+Atras do bau, entre pedras rachadas, um brilho azulado pulsa — um portal encoberto pela escuridao, como se aguardasse por voce.
+
 [ESCOLHAS]
+15: entrar ao portal
 [FINAL]

@@ -1,9 +1,7 @@
 [TEXTO]
-Voce analisa os símbolos pintados com sangue. Sao escritos antigos… mas algo dentro de voce entende:
-"Somente aquele que ja morreu pode atravessar o Veu e confrontar o Fogo."
+Voce esta no corredor escuro. Ele se estende por metros, ate encontrar uma porta de ferro antiga com uma fechadura enferrujada.
+O colar em seu pescoco vibra — algo atras daquela porta esta vivo.
 
-As palavras ativam um lampejo de memoria: eu… foi sacrificado?
 [ESCOLHAS]
-10: Seguir adiante
-6: Entrar na porta de atalho 
-[FINAL]
+9: Usar a chave prateada na porta
+10: Bater com força, Dando uma ombreada

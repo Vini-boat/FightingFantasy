@@ -1,3 +1,5 @@
-adaga
-chave
-escudo
+Adaga_Runica
+Amuleto_Abissal
+Chave_Prata
+Escudo_Palido
+Runa_Guardia

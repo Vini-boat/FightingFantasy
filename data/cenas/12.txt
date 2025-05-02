@@ -1,8 +1,6 @@
 [TEXTO]
-Voce bate forte na porta… Silencio. E entao, o som de movimnetacao.
-Sem aviso, a GARGULA tenta atacar!
+Com a gargula em pedaços, Atras do pedestal onde ela repousava, revela-se melhor a sala: um antigo santuario de vigia, dedicado a forças esquecidas. com estatuas e duas saidas
 
-(TC – Combate com Gárgula)
 [ESCOLHAS]
-14: Seguir pelo arco no fundo da sala
-[FINAL]
+11: Uma passagem onde sopra uma brisa morna e umida
+14: um escombro parcialmente escondido atrás de uma coluna caida

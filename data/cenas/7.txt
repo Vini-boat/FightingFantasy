@@ -1,8 +1,11 @@
 [TEXTO]
-Ao tocar o pedestal,vem um fragmento de memoria. Voce esta preso, diante de eremitas… um portal surge. Um sacrificio? apos vislumbrar encima do pedestal ha uma chave
+Você analisa os símbolos pintados com sangue. Sao escritos antigos… mas algo dentro de você entende:
+"Somente aquele que ja morreu pode atravessar o Veu e confrontar o Fogo."
 
-id I: Chave Prateada;c;0;0;0
-id I: Fragmento de Memória;c;0;0;0
+As palavras ativam um lampejo de memoria: eu… foi sacrificado?
+
+Voce acha um escudo forjado em ossos...
+[ITENS]
+Escudo_Palido
 [ESCOLHAS]
-9: Seguir pelo corredor escuro
-[FINAL]
+8: Seguir a trilha adinate

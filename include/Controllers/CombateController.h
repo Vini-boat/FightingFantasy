@@ -12,6 +12,7 @@
 
 #include <memory>
 #include <string>
+#include <random>
 
 using namespace std;
 class CombateController : public BaseController, public ISetMonstro, public IAtaque
@@ -39,6 +40,9 @@ class CombateController : public BaseController, public ISetMonstro, public IAta
         string monstro_atual;
         shared_ptr<ChangeView> change_to_cenas_view;
         CenaController* cena_controller;
+
+        unique_ptr<mt19937> gen;
+
 };
 
 #endif // COMBATECONTROLLER_H

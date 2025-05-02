@@ -1,12 +1,6 @@
 [TEXTO]
-Voce vasculha a area ao redor da porta. Atras de uma pedra falsa, encontra uma inscricao escondida em um pano enrrodo:
+Voce insere a chave prateada na fechadura. Ela gira com facilidade. A porta se abre com um rangido. Mas uma GARGULA esta adormecida e não acorda com o barulho minimo!
 
-“O selo so se quebra com verdade, sangue ou submissao.”
-
-Dentro, uma lamina Afiada Brilhante e um simbolo familiar: o do seu colar.
-
-id I: Lamina Arcana;c;0;0;0(+Dano)
 [ESCOLHAS]
-11: Usar a chave prateada na porta
-12: Bater com força, Dando uma ombrada
-[FINAL]
+9: Matar furtivamente(HIT KILL)
+11: atravessar devagar para uma passagem umida sem mata-la

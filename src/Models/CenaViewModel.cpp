@@ -2,6 +2,7 @@
 #include "CenaModel.h"
 #include "../../include/Interfaces/ISerializavel.h"
 #include <string>
+#include <iostream>
 #include <fstream>
 #include <memory>
 #include <vector>
@@ -36,6 +37,7 @@ void CenaViewModel::desserializar(string filename)
 
     for(string nome : nomes)
     {
+        cout << nome << endl;
         this->cenas[nome] = make_unique<CenaModel>();
         this->cenas[nome]->desserializar("./data/cenas/" + nome + ".txt");
     }

@@ -1,9 +1,7 @@
 [NOME]
-chave
-[DESCRICAO]
-Abre a porta
+Amuleto Abissal
 [TIPO]
-normal
+Oculto
 [COMBATE]
 0
 [MODIFICADOR]
